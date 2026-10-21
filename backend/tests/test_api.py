@@ -10,8 +10,10 @@ from backend.app import detector as detector_module
 
 class StubDetector:
     names = {0: "test"}
+    last_prediction = None
 
     def predict(self, image, conf=0.25, iou=0.5):
+        type(self).last_prediction = (image, conf, iou)
         return {"width": image.width, "height": image.height, "detections": []}
 
 
@@ -81,6 +83,19 @@ class DetectEndpointTests(unittest.IsolatedAsyncioTestCase):
         result = await api.detect(upload, conf=0.25, iou=0.5)
 
         self.assertEqual(result, {"width": 1, "height": 1, "detections": []})
+
+    async def test_detect_forwards_confidence_and_iou_to_detector(self):
+        from fastapi import UploadFile
+
+        data = png_bytes()
+        api.MAX_BYTES = len(data)
+        api.MAX_PIXELS = 1
+        upload = UploadFile(filename="small.png", file=io.BytesIO(data))
+
+        await api.detect(upload, conf=0.65, iou=0.3)
+
+        image, conf, iou = StubDetector.last_prediction
+        self.assertEqual((image.size, conf, iou), ((1, 1), 0.65, 0.3))
 
     async def test_detect_rejects_invalid_image(self):
         from fastapi import UploadFile
