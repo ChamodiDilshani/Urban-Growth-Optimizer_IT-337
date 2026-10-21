@@ -1,0 +1,6 @@
+Copy these files from your illeagal-land.zip into this folder:
+
+  siam_resunet_complete.pt   (preferred: TorchScript, loads without the class)
+  best_siam_resunet.pth      (optional fallback: raw weights)
+
+threshold.json and test_metrics.json are already here.

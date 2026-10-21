@@ -1,0 +1,64 @@
+@import "tailwindcss";
+
+/* Colour tokens. The four map colours match the notebook's renderer:
+   zone = orange (255,140,0), encroachment = red, compliant = green, change = yellow. */
+@theme {
+  --font-sans: "Public Sans", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+
+  --color-bg: #eef2f3;
+  --color-surface: #ffffff;
+  --color-sunken: #e3e9eb;
+  --color-ink: #12212b;
+  --color-muted: #5a6b75;
+  --color-line: #d3dce0;
+  --color-primary: #1f5f8b;
+  --color-primary-ink: #ffffff;
+
+  --color-zone: #f28c1b;
+  --color-alert: #d7372f;
+  --color-ok: #1f9254;
+  --color-change: #d9ad00;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-bg: #0f1a21;
+    --color-surface: #16242d;
+    --color-sunken: #0b141a;
+    --color-ink: #e6edf0;
+    --color-muted: #92a4ae;
+    --color-line: #2a3b45;
+    --color-primary: #5fa8d9;
+    --color-primary-ink: #0f1a21;
+    --color-alert: #f0645c;
+    --color-ok: #3fbf7a;
+    --color-change: #f2c94c;
+  }
+}
+
+html {
+  background: var(--color-bg);
+  color: var(--color-ink);
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  font-family: var(--font-sans);
+  min-height: 100vh;
+}
+
+.tabular {
+  font-variant-numeric: tabular-nums;
+}
+
+/* Slider styling for the threshold control */
+input[type="range"] {
+  accent-color: var(--color-primary);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    transition: none !important;
+    animation: none !important;
+  }
+}
