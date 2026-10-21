@@ -1,0 +1,36 @@
+{
+  "schools": {
+    "count": 68,
+    "real_mean_suitability": 0.6537401496206185,
+    "random_mean_suitability": 0.5935454151743507,
+    "mann_whitney_pvalue": 3.6356014578500896e-16,
+    "ttest_pvalue": 1.0045640759517935e-11,
+    "roc_auc": 0.7919558823529411,
+    "recommended_site": {
+      "grid_row": 127,
+      "grid_col": 189,
+      "lat": 7.603266331658292,
+      "lon": 80.97236180904522,
+      "fitness": 0.7667809872007831,
+      "min_distance_to_existing_km": 2.2891510652318514,
+      "mean_distance_to_existing_km": 43.965372885909396
+    }
+  },
+  "hospitals": {
+    "count": 27,
+    "real_mean_suitability": 0.5897845353563201,
+    "random_mean_suitability": 0.5314010615101555,
+    "mann_whitney_pvalue": 5.622168864030545e-12,
+    "ttest_pvalue": 1.8629801413932963e-06,
+    "roc_auc": 0.8824444444444445,
+    "recommended_site": {
+      "grid_row": 13,
+      "grid_col": 192,
+      "lat": 8.00427135678392,
+      "lon": 80.98065326633166,
+      "fitness": 0.6996669465686782,
+      "min_distance_to_existing_km": 25.00719361892581,
+      "mean_distance_to_existing_km": 62.43579310098844
+    }
+  }
+}

@@ -1,0 +1,2252 @@
+[
+  {
+    "id": "poi_0",
+    "type": "police",
+    "category": "Police Station",
+    "name": "Matale Police Station",
+    "emoji": "👮",
+    "color": "#3b82f6",
+    "lat": 7.46263,
+    "lon": 80.62621
+  },
+  {
+    "id": "poi_1",
+    "type": "bank",
+    "category": "Commercial Bank",
+    "name": "BOC",
+    "emoji": "🏦",
+    "color": "#f59e0b",
+    "lat": 7.94163,
+    "lon": 80.72583
+  },
+  {
+    "id": "poi_2",
+    "type": "pharmacy",
+    "category": "Pharmacy / Medical",
+    "name": NaN,
+    "emoji": "💊",
+    "color": "#10b981",
+    "lat": 7.94026,
+    "lon": 80.7278
+  },
+  {
+    "id": "poi_3",
+    "type": "police",
+    "category": "Police Station",
+    "name": "Galagedara Police Station",
+    "emoji": "👮",
+    "color": "#3b82f6",
+    "lat": 7.37621,
+    "lon": 80.5205
+  },
+  {
+    "id": "poi_4",
+    "type": "police",
+    "category": "Police Station",
+    "name": "Hasalaka Police Station",
+    "emoji": "👮",
+    "color": "#3b82f6",
+    "lat": 7.35337,
+    "lon": 80.95455
+  },
+  {
+    "id": "poi_5",
+    "type": "police",
+    "category": "Police Station",
+    "name": "Police Station - Galewela",
+    "emoji": "👮",
+    "color": "#3b82f6",
+    "lat": 7.76325,
+    "lon": 80.57419
+  },
+  {
+    "id": "poi_6",
+    "type": "bank",
+    "category": "Commercial Bank",
+    "name": "Peoples Bank",
+    "emoji": "🏦",
+    "color": "#f59e0b",
+    "lat": 8.04071,
+    "lon": 80.9532
+  },
+  {
+    "id": "poi_7",
+    "type": "bank",
+    "category": "Commercial Bank",
+    "name": "Seylan Bank",
+    "emoji": "🏦",
+    "color": "#f59e0b",
+    "lat": 8.04173,
+    "lon": 80.95415
+  },
+  {
+    "id": "poi_8",
+    "type": "bank",
+    "category": "Commercial Bank",
+    "name": "BOC",
+    "emoji": "🏦",
+    "color": "#f59e0b",
+    "lat": 8.04151,
+    "lon": 80.95252
+  },
+  {
+    "id": "poi_9",
+    "type": "atm",
+    "category": "ATM Facility",
+    "name": "Peoples Bank",
+    "emoji": "💳",
+    "color": "#fbbf24",
+    "lat": 8.03996,
+    "lon": 80.75475
+  },
+  {
+    "id": "poi_10",
+    "type": "bank",
+    "category": "Commercial Bank",
+    "name": "Bank Of Ceylon",
+    "emoji": "🏦",
+    "color": "#f59e0b",
+    "lat": 7.91465,
+    "lon": 80.99761
+  },
+  {
+    "id": "poi_11",
+    "type": "police",
+    "category": "Police Station",
+    "name": "Rideegama Police Station",
+    "emoji": "👮",
+    "color": "#3b82f6",
+    "lat": 7.54808,
+    "lon": 80.49244
+  },
+  {
+    "id": "poi_12",
+    "type": "bank",
+    "category": "Commercial Bank",
+    "name": "Bank of Ceylon",
+    "emoji": "🏦",
+    "color": "#f59e0b",
+    "lat": 7.54782,
+    "lon": 80.48976
+  },
+  {
+    "id": "poi_13",
+    "type": "atm",
+    "category": "ATM Facility",
+    "name": NaN,
+    "emoji": "💳",
+    "color": "#fbbf24",
+    "lat": 8.00204,
+    "lon": 80.92448
+  },
+  {
+    "id": "poi_14",
+    "type": "bank",
+    "category": "Commercial Bank",
+    "name": "Peoples Bank ATM",
+    "emoji": "🏦",
+    "color": "#f59e0b",
+    "lat": 7.43846,
+    "lon": 80.57178
+  },
+  {
+    "id": "poi_15",
+    "type": "police",
+    "category": "Police Station",
+    "name": "Ankumbura Police Station",
+    "emoji": "👮",
+    "color": "#3b82f6",
+    "lat": 7.43881,
+    "lon": 80.57199
+  },
+  {
+    "id": "poi_16",
+    "type": "atm",
+    "category": "ATM Facility",
+    "name": NaN,
+    "emoji": "💳",
+    "color": "#fbbf24",
+    "lat": 8.04006,
+    "lon": 80.75535
+  },
+  {
+    "id": "poi_17",
+    "type": "bank",
+    "category": "Commercial Bank",
+    "name": "peoples bank",
+    "emoji": "🏦",
+    "color": "#f59e0b",
+    "lat": 7.46913,
+    "lon": 80.62264
+  },
+  {
+    "id": "poi_18",
+    "type": "post_office",
+    "category": "Post Office",
+    "name": "Galagedara Post Office",
+    "emoji": "📮",
+    "color": "#8b5cf6",
+    "lat": 7.37252,
+    "lon": 80.5249
+  },
+  {
+    "id": "poi_19",
+    "type": "post_office",
+    "category": "Post Office",
+    "name": "Bokkawala Post Office",
+    "emoji": "📮",
+    "color": "#8b5cf6",
+    "lat": 7.39318,
+    "lon": 80.55374
+  },
+  {
+    "id": "poi_20",
+    "type": "bank",
+    "category": "Commercial Bank",
+    "name": "Bank of Ceylon",
+    "emoji": "🏦",
+    "color": "#f59e0b",
+    "lat": 7.39273,
+    "lon": 80.55394
+  },
+  {
+    "id": "poi_21",
+    "type": "post_office",
+    "category": "Post Office",
+    "name": "Ankumbura Post Office",
+    "emoji": "📮",
+    "color": "#8b5cf6",
+    "lat": 7.43925,
+    "lon": 80.57033
+  },
+  {
+    "id": "poi_22",
+    "type": "police",
+    "category": "Police Station",
+    "name": "Alawatugoda Police Station",
+    "emoji": "👮",
+    "color": "#3b82f6",
+    "lat": 7.40947,
+    "lon": 80.60866
+  },
+  {
+    "id": "poi_23",
+    "type": "post_office",
+    "category": "Post Office",
+    "name": "Alawathugoda Post Office",
+    "emoji": "📮",
+    "color": "#8b5cf6",
+    "lat": 7.4093,
+    "lon": 80.60791
+  },
+  {
+    "id": "poi_24",
+    "type": "post_office",
+    "category": "Post Office",
+    "name": "Akurana Post Office",
+    "emoji": "📮",
+    "color": "#8b5cf6",
+    "lat": 7.36452,
+    "lon": 80.61897
+  },
+  {
+    "id": "poi_25",
+    "type": "bank",
+    "category": "Commercial Bank",
+    "name": "Bank of Ceylon",
+    "emoji": "🏦",
+    "color": "#f59e0b",
+    "lat": 7.36215,
+    "lon": 80.61803
+  },
+  {
+    "id": "poi_26",
+    "type": "bank",
+    "category": "Commercial Bank",
+    "name": "Commercial Bank",
+    "emoji": "🏦",
+    "color": "#f59e0b",
+    "lat": 7.36179,
+    "lon": 80.61787
+  },
+  {
+    "id": "poi_27",
+    "type": "post_office",
+    "category": "Post Office",
+    "name": "Wattegama Post Office",
+    "emoji": "📮",
+    "color": "#8b5cf6",
+    "lat": 7.35039,
+    "lon": 80.68132
+  },
+  {
+    "id": "poi_28",
+    "type": "bank",
+    "category": "Commercial Bank",
+    "name": "People's Bank",
+    "emoji": "🏦",
+    "color": "#f59e0b",
+    "lat": 7.3506,
+    "lon": 80.68184
+  },
+  {
+    "id": "poi_29",
+    "type": "post_office",
+    "category": "Post Office",
+    "name": "Gallellagama Post Office",
+    "emoji": "📮",
+    "color": "#8b5cf6",
+    "lat": 7.3789,
+    "lon": 80.55112
+  },
+  {
+    "id": "poi_30",
+    "type": "bank",
+    "category": "Commercial Bank",
+    "name": "Peoples Bank",
+    "emoji": "🏦",
+    "color": "#f59e0b",
+    "lat": 8.03484,
+    "lon": 80.48029
+  },
+  {
+    "id": "poi_31",
+    "type": "bank",
+    "category": "Commercial Bank",
+    "name": "BOC",
+    "emoji": "🏦",
+    "color": "#f59e0b",
+    "lat": 8.03621,
+    "lon": 80.47906
+  },
+  {
+    "id": "poi_32",
+    "type": "police",
+    "category": "Police Station",
+    "name": "Galagedara Police",
+    "emoji": "👮",
+    "color": "#3b82f6",
+    "lat": 7.37385,
+    "lon": 80.52607
+  },
+  {
+    "id": "poi_33",
+    "type": "police",
+    "category": "Police Station",
+    "name": "Aukana Temple Police Post",
+    "emoji": "👮",
+    "color": "#3b82f6",
+    "lat": 8.00954,
+    "lon": 80.51384
+  },
+  {
+    "id": "poi_34",
+    "type": "bank",
+    "category": "Commercial Bank",
+    "name": "Sampath Bank",
+    "emoji": "🏦",
+    "color": "#f59e0b",
+    "lat": 7.87782,
+    "lon": 80.65083
+  },
+  {
+    "id": "poi_35",
+    "type": "post_office",
+    "category": "Post Office",
+    "name": "PO RE Office",
+    "emoji": "📮",
+    "color": "#8b5cf6",
+    "lat": 8.00851,
+    "lon": 80.91264
+  },
+  {
+    "id": "poi_36",
+    "type": "post_office",
+    "category": "Post Office",
+    "name": "11 AthumalpitiyaJunction - LaxauyanaSiyambalagasJunction",
+    "emoji": "📮",
+    "color": "#8b5cf6",
+    "lat": 7.97857,
+    "lon": 80.996
+  },
+  {
+    "id": "poi_37",
+    "type": "post_office",
+    "category": "Post Office",
+    "name": "14 Kadawela Wewa Road Stage - 01",
+    "emoji": "📮",
+    "color": "#8b5cf6",
+    "lat": 7.96278,
+    "lon": 80.98127
+  },
+  {
+    "id": "poi_38",
+    "type": "post_office",
+    "category": "Post Office",
+    "name": "01 Ihekuluwewa Village Road",
+    "emoji": "📮",
+    "color": "#8b5cf6",
+    "lat": 7.96386,
+    "lon": 80.85575
+  },
+  {
+    "id": "poi_39",
+    "type": "post_office",
+    "category": "Post Office",
+    "name": "19 Elagamuwa Junction Canal Road HorapolaNew Mosque Road",
+    "emoji": "📮",
+    "color": "#8b5cf6",
+    "lat": 7.99693,
+    "lon": 80.60887
+  },
+  {
+    "id": "poi_40",
+    "type": "post_office",
+    "category": "Post Office",
+    "name": "27 KudawatagalaDambuluhalmillewaRoad",
+    "emoji": "📮",
+    "color": "#8b5cf6",
+    "lat": 7.92072,
+    "lon": 80.58077
+  },
+  {
+    "id": "poi_41",
+    "type": "post_office",
+    "category": "Post Office",
+    "name": "28 Ulpothagama JunctionMorotthegama Road",
+    "emoji": "📮",
+    "color": "#8b5cf6",
+    "lat": 7.91214,
+    "lon": 80.56436
+  },
+  {
+    "id": "poi_42",
+    "type": "post_office",
+    "category": "Post Office",
+    "name": "26 BalaluwewaKarawilagala Road",
+    "emoji": "📮",
+    "color": "#8b5cf6",
+    "lat": 7.98064,
+    "lon": 80.52896
+  },
+  {
+    "id": "poi_43",
+    "type": "post_office",
+    "category": "Post Office",
+    "name": "23 Dabawatana Road",
+    "emoji": "📮",
+    "color": "#8b5cf6",
+    "lat": 7.95914,
+    "lon": 80.57301
+  },
+  {
+    "id": "poi_44",
+    "type": "post_office",
+    "category": "Post Office",
+    "name": NaN,
+    "emoji": "📮",
+    "color": "#8b5cf6",
+    "lat": 8.04353,
+    "lon": 80.74421
+  },
+  {
+    "id": "poi_45",
+    "type": "post_office",
+    "category": "Post Office",
+    "name": NaN,
+    "emoji": "📮",
+    "color": "#8b5cf6",
+    "lat": 7.99731,
+    "lon": 80.45423
+  },
+  {
+    "id": "poi_46",
+    "type": "post_office",
+    "category": "Post Office",
+    "name": NaN,
+    "emoji": "📮",
+    "color": "#8b5cf6",
+    "lat": 7.75832,
+    "lon": 80.80218
+  },
+  {
+    "id": "poi_47",
+    "type": "post_office",
+    "category": "Post Office",
+    "name": NaN,
+    "emoji": "📮",
+    "color": "#8b5cf6",
+    "lat": 7.78005,
+    "lon": 80.81696
+  },
+  {
+    "id": "poi_48",
+    "type": "post_office",
+    "category": "Post Office",
+    "name": NaN,
+    "emoji": "📮",
+    "color": "#8b5cf6",
+    "lat": 7.73143,
+    "lon": 80.79052
+  },
+  {
+    "id": "poi_49",
+    "type": "post_office",
+    "category": "Post Office",
+    "name": NaN,
+    "emoji": "📮",
+    "color": "#8b5cf6",
+    "lat": 7.78302,
+    "lon": 80.84274
+  },
+  {
+    "id": "poi_50",
+    "type": "post_office",
+    "category": "Post Office",
+    "name": NaN,
+    "emoji": "📮",
+    "color": "#8b5cf6",
+    "lat": 7.91238,
+    "lon": 80.85905
+  },
+  {
+    "id": "poi_51",
+    "type": "post_office",
+    "category": "Post Office",
+    "name": NaN,
+    "emoji": "📮",
+    "color": "#8b5cf6",
+    "lat": 7.82915,
+    "lon": 80.84802
+  },
+  {
+    "id": "poi_52",
+    "type": "post_office",
+    "category": "Post Office",
+    "name": NaN,
+    "emoji": "📮",
+    "color": "#8b5cf6",
+    "lat": 7.81918,
+    "lon": 80.83584
+  },
+  {
+    "id": "poi_53",
+    "type": "post_office",
+    "category": "Post Office",
+    "name": NaN,
+    "emoji": "📮",
+    "color": "#8b5cf6",
+    "lat": 7.93458,
+    "lon": 80.86651
+  },
+  {
+    "id": "poi_54",
+    "type": "post_office",
+    "category": "Post Office",
+    "name": NaN,
+    "emoji": "📮",
+    "color": "#8b5cf6",
+    "lat": 8.04291,
+    "lon": 80.98466
+  },
+  {
+    "id": "poi_55",
+    "type": "post_office",
+    "category": "Post Office",
+    "name": NaN,
+    "emoji": "📮",
+    "color": "#8b5cf6",
+    "lat": 7.91569,
+    "lon": 80.86212
+  },
+  {
+    "id": "poi_56",
+    "type": "post_office",
+    "category": "Post Office",
+    "name": NaN,
+    "emoji": "📮",
+    "color": "#8b5cf6",
+    "lat": 7.89019,
+    "lon": 80.97733
+  },
+  {
+    "id": "poi_57",
+    "type": "post_office",
+    "category": "Post Office",
+    "name": NaN,
+    "emoji": "📮",
+    "color": "#8b5cf6",
+    "lat": 8.0396,
+    "lon": 80.90571
+  },
+  {
+    "id": "poi_58",
+    "type": "post_office",
+    "category": "Post Office",
+    "name": NaN,
+    "emoji": "📮",
+    "color": "#8b5cf6",
+    "lat": 7.90142,
+    "lon": 80.99711
+  },
+  {
+    "id": "poi_59",
+    "type": "post_office",
+    "category": "Post Office",
+    "name": NaN,
+    "emoji": "📮",
+    "color": "#8b5cf6",
+    "lat": 7.8778,
+    "lon": 80.96905
+  },
+  {
+    "id": "poi_60",
+    "type": "post_office",
+    "category": "Post Office",
+    "name": NaN,
+    "emoji": "📮",
+    "color": "#8b5cf6",
+    "lat": 8.03801,
+    "lon": 80.94159
+  },
+  {
+    "id": "poi_61",
+    "type": "post_office",
+    "category": "Post Office",
+    "name": NaN,
+    "emoji": "📮",
+    "color": "#8b5cf6",
+    "lat": 7.87517,
+    "lon": 80.856
+  },
+  {
+    "id": "poi_62",
+    "type": "post_office",
+    "category": "Post Office",
+    "name": "Pilhatha Sub Post Office",
+    "emoji": "📮",
+    "color": "#8b5cf6",
+    "lat": 7.38406,
+    "lon": 80.96325
+  },
+  {
+    "id": "poi_63",
+    "type": "post_office",
+    "category": "Post Office",
+    "name": "Barawardanaoya Sub Post Office",
+    "emoji": "📮",
+    "color": "#8b5cf6",
+    "lat": 7.43741,
+    "lon": 80.95016
+  },
+  {
+    "id": "poi_64",
+    "type": "post_office",
+    "category": "Post Office",
+    "name": "Dehemigama Sub Post Office",
+    "emoji": "📮",
+    "color": "#8b5cf6",
+    "lat": 7.46071,
+    "lon": 80.94094
+  },
+  {
+    "id": "poi_65",
+    "type": "post_office",
+    "category": "Post Office",
+    "name": "Rangala Sub Post Office",
+    "emoji": "📮",
+    "color": "#8b5cf6",
+    "lat": 7.35621,
+    "lon": 80.78986
+  },
+  {
+    "id": "poi_66",
+    "type": "post_office",
+    "category": "Post Office",
+    "name": "Werapitiya Sub Post Office",
+    "emoji": "📮",
+    "color": "#8b5cf6",
+    "lat": 7.36096,
+    "lon": 80.75588
+  },
+  {
+    "id": "poi_67",
+    "type": "atm",
+    "category": "ATM Facility",
+    "name": NaN,
+    "emoji": "💳",
+    "color": "#fbbf24",
+    "lat": 7.96004,
+    "lon": 80.98925
+  },
+  {
+    "id": "poi_68",
+    "type": "bank",
+    "category": "Commercial Bank",
+    "name": NaN,
+    "emoji": "🏦",
+    "color": "#f59e0b",
+    "lat": 7.37286,
+    "lon": 80.51813
+  },
+  {
+    "id": "poi_69",
+    "type": "atm",
+    "category": "ATM Facility",
+    "name": NaN,
+    "emoji": "💳",
+    "color": "#fbbf24",
+    "lat": 8.04012,
+    "lon": 80.75541
+  },
+  {
+    "id": "poi_70",
+    "type": "atm",
+    "category": "ATM Facility",
+    "name": NaN,
+    "emoji": "💳",
+    "color": "#fbbf24",
+    "lat": 7.42269,
+    "lon": 80.63209
+  },
+  {
+    "id": "poi_71",
+    "type": "bank",
+    "category": "Commercial Bank",
+    "name": NaN,
+    "emoji": "🏦",
+    "color": "#f59e0b",
+    "lat": 7.42261,
+    "lon": 80.63193
+  },
+  {
+    "id": "poi_72",
+    "type": "atm",
+    "category": "ATM Facility",
+    "name": NaN,
+    "emoji": "💳",
+    "color": "#fbbf24",
+    "lat": 7.4226,
+    "lon": 80.63226
+  },
+  {
+    "id": "poi_73",
+    "type": "bank",
+    "category": "Commercial Bank",
+    "name": "HNB",
+    "emoji": "🏦",
+    "color": "#f59e0b",
+    "lat": 7.87806,
+    "lon": 80.65077
+  },
+  {
+    "id": "poi_74",
+    "type": "bank",
+    "category": "Commercial Bank",
+    "name": "Commercial Bank of Ceylon",
+    "emoji": "🏦",
+    "color": "#f59e0b",
+    "lat": 7.87691,
+    "lon": 80.65103
+  },
+  {
+    "id": "poi_75",
+    "type": "atm",
+    "category": "ATM Facility",
+    "name": NaN,
+    "emoji": "💳",
+    "color": "#fbbf24",
+    "lat": 7.95705,
+    "lon": 80.75261
+  },
+  {
+    "id": "poi_76",
+    "type": "bank",
+    "category": "Commercial Bank",
+    "name": "People's Bank Galewela",
+    "emoji": "🏦",
+    "color": "#f59e0b",
+    "lat": 7.75853,
+    "lon": 80.57036
+  },
+  {
+    "id": "poi_77",
+    "type": "bank",
+    "category": "Commercial Bank",
+    "name": "NDB Bank",
+    "emoji": "🏦",
+    "color": "#f59e0b",
+    "lat": 7.8738,
+    "lon": 80.65055
+  },
+  {
+    "id": "poi_78",
+    "type": "pharmacy",
+    "category": "Pharmacy / Medical",
+    "name": "Harcourts Pharmacy",
+    "emoji": "💊",
+    "color": "#10b981",
+    "lat": 7.87285,
+    "lon": 80.64997
+  },
+  {
+    "id": "poi_79",
+    "type": "bank",
+    "category": "Commercial Bank",
+    "name": "DFCC Bank",
+    "emoji": "🏦",
+    "color": "#f59e0b",
+    "lat": 7.87874,
+    "lon": 80.65016
+  },
+  {
+    "id": "poi_80",
+    "type": "pharmacy",
+    "category": "Pharmacy / Medical",
+    "name": "Weerarathne Pharmacy",
+    "emoji": "💊",
+    "color": "#10b981",
+    "lat": 7.87685,
+    "lon": 80.65068
+  },
+  {
+    "id": "poi_81",
+    "type": "bank",
+    "category": "Commercial Bank",
+    "name": "Seylan Bank",
+    "emoji": "🏦",
+    "color": "#f59e0b",
+    "lat": 7.87713,
+    "lon": 80.6506
+  },
+  {
+    "id": "poi_82",
+    "type": "pharmacy",
+    "category": "Pharmacy / Medical",
+    "name": "Dharshana Pharmacy",
+    "emoji": "💊",
+    "color": "#10b981",
+    "lat": 7.87318,
+    "lon": 80.65016
+  },
+  {
+    "id": "poi_83",
+    "type": "pharmacy",
+    "category": "Pharmacy / Medical",
+    "name": "Rangiri Osusala",
+    "emoji": "💊",
+    "color": "#10b981",
+    "lat": 7.87341,
+    "lon": 80.6503
+  },
+  {
+    "id": "poi_84",
+    "type": "pharmacy",
+    "category": "Pharmacy / Medical",
+    "name": "Dharshana Pharmacy",
+    "emoji": "💊",
+    "color": "#10b981",
+    "lat": 7.87337,
+    "lon": 80.65028
+  },
+  {
+    "id": "poi_85",
+    "type": "pharmacy",
+    "category": "Pharmacy / Medical",
+    "name": "Mahajana Pharmacy",
+    "emoji": "💊",
+    "color": "#10b981",
+    "lat": 7.87343,
+    "lon": 80.6514
+  },
+  {
+    "id": "poi_86",
+    "type": "pharmacy",
+    "category": "Pharmacy / Medical",
+    "name": "Sugath Pharmacy",
+    "emoji": "💊",
+    "color": "#10b981",
+    "lat": 7.87047,
+    "lon": 80.65112
+  },
+  {
+    "id": "poi_87",
+    "type": "bank",
+    "category": "Commercial Bank",
+    "name": NaN,
+    "emoji": "🏦",
+    "color": "#f59e0b",
+    "lat": 7.87028,
+    "lon": 80.65072
+  },
+  {
+    "id": "poi_88",
+    "type": "police",
+    "category": "Police Station",
+    "name": "Dambulla Police Station",
+    "emoji": "👮",
+    "color": "#3b82f6",
+    "lat": 7.86221,
+    "lon": 80.64912
+  },
+  {
+    "id": "poi_89",
+    "type": "pharmacy",
+    "category": "Pharmacy / Medical",
+    "name": "NIV Pharmacy",
+    "emoji": "💊",
+    "color": "#10b981",
+    "lat": 7.85765,
+    "lon": 80.65901
+  },
+  {
+    "id": "poi_90",
+    "type": "post_office",
+    "category": "Post Office",
+    "name": "Galewela Post Office",
+    "emoji": "📮",
+    "color": "#8b5cf6",
+    "lat": 7.7621,
+    "lon": 80.57022
+  },
+  {
+    "id": "poi_91",
+    "type": "bank",
+    "category": "Commercial Bank",
+    "name": "BOC - Galewela",
+    "emoji": "🏦",
+    "color": "#f59e0b",
+    "lat": 7.75884,
+    "lon": 80.57065
+  },
+  {
+    "id": "poi_92",
+    "type": "bank",
+    "category": "Commercial Bank",
+    "name": "NSB Bank",
+    "emoji": "🏦",
+    "color": "#f59e0b",
+    "lat": 7.7592,
+    "lon": 80.57098
+  },
+  {
+    "id": "poi_93",
+    "type": "bank",
+    "category": "Commercial Bank",
+    "name": "Pan Asia Bank",
+    "emoji": "🏦",
+    "color": "#f59e0b",
+    "lat": 7.75892,
+    "lon": 80.57039
+  },
+  {
+    "id": "poi_94",
+    "type": "bank",
+    "category": "Commercial Bank",
+    "name": "DFCC BANK",
+    "emoji": "🏦",
+    "color": "#f59e0b",
+    "lat": 7.75592,
+    "lon": 80.56795
+  },
+  {
+    "id": "poi_95",
+    "type": "bank",
+    "category": "Commercial Bank",
+    "name": "Peoples Bank",
+    "emoji": "🏦",
+    "color": "#f59e0b",
+    "lat": 7.75747,
+    "lon": 80.56907
+  },
+  {
+    "id": "poi_96",
+    "type": "bank",
+    "category": "Commercial Bank",
+    "name": "HNB Bank",
+    "emoji": "🏦",
+    "color": "#f59e0b",
+    "lat": 7.75713,
+    "lon": 80.56868
+  },
+  {
+    "id": "poi_97",
+    "type": "bank",
+    "category": "Commercial Bank",
+    "name": "Commercial Bank of Ceylon PLC",
+    "emoji": "🏦",
+    "color": "#f59e0b",
+    "lat": 7.75513,
+    "lon": 80.56858
+  },
+  {
+    "id": "poi_98",
+    "type": "post_office",
+    "category": "Post Office",
+    "name": "bambaragaswewa sub post office",
+    "emoji": "📮",
+    "color": "#8b5cf6",
+    "lat": 7.79207,
+    "lon": 80.53123
+  },
+  {
+    "id": "poi_99",
+    "type": "post_office",
+    "category": "Post Office",
+    "name": "Maadipola Post Office",
+    "emoji": "📮",
+    "color": "#8b5cf6",
+    "lat": 7.68534,
+    "lon": 80.58029
+  },
+  {
+    "id": "poi_100",
+    "type": "bank",
+    "category": "Commercial Bank",
+    "name": "Regional Rural Bank",
+    "emoji": "🏦",
+    "color": "#f59e0b",
+    "lat": 7.56119,
+    "lon": 80.60889
+  },
+  {
+    "id": "poi_101",
+    "type": "bank",
+    "category": "Commercial Bank",
+    "name": "Nikagolla Rural Bank",
+    "emoji": "🏦",
+    "color": "#f59e0b",
+    "lat": 7.57146,
+    "lon": 80.59588
+  },
+  {
+    "id": "poi_102",
+    "type": "bank",
+    "category": "Commercial Bank",
+    "name": "Peoples Bank",
+    "emoji": "🏦",
+    "color": "#f59e0b",
+    "lat": 7.62467,
+    "lon": 80.60656
+  },
+  {
+    "id": "poi_103",
+    "type": "bank",
+    "category": "Commercial Bank",
+    "name": "Bank of Ceylon",
+    "emoji": "🏦",
+    "color": "#f59e0b",
+    "lat": 7.62572,
+    "lon": 80.6068
+  },
+  {
+    "id": "poi_104",
+    "type": "post_office",
+    "category": "Post Office",
+    "name": "Pallepola Post Office",
+    "emoji": "📮",
+    "color": "#8b5cf6",
+    "lat": 7.62192,
+    "lon": 80.60657
+  },
+  {
+    "id": "poi_105",
+    "type": "bank",
+    "category": "Commercial Bank",
+    "name": "Samurdhi Bank",
+    "emoji": "🏦",
+    "color": "#f59e0b",
+    "lat": 7.62205,
+    "lon": 80.6065
+  },
+  {
+    "id": "poi_106",
+    "type": "post_office",
+    "category": "Post Office",
+    "name": "Post Office - Madawala ulpatha",
+    "emoji": "📮",
+    "color": "#8b5cf6",
+    "lat": 7.61137,
+    "lon": 80.63739
+  },
+  {
+    "id": "poi_107",
+    "type": "bank",
+    "category": "Commercial Bank",
+    "name": "People's Bank",
+    "emoji": "🏦",
+    "color": "#f59e0b",
+    "lat": 7.61015,
+    "lon": 80.63644
+  },
+  {
+    "id": "poi_108",
+    "type": "post_office",
+    "category": "Post Office",
+    "name": "Nalada sub post office",
+    "emoji": "📮",
+    "color": "#8b5cf6",
+    "lat": 7.66588,
+    "lon": 80.63693
+  },
+  {
+    "id": "poi_109",
+    "type": "police",
+    "category": "Police Station",
+    "name": "Hettipola Police Station",
+    "emoji": "👮",
+    "color": "#3b82f6",
+    "lat": 7.54208,
+    "lon": 80.91648
+  },
+  {
+    "id": "poi_110",
+    "type": "bank",
+    "category": "Commercial Bank",
+    "name": "Coop Rural Bank",
+    "emoji": "🏦",
+    "color": "#f59e0b",
+    "lat": 7.6774,
+    "lon": 80.64126
+  },
+  {
+    "id": "poi_111",
+    "type": "bank",
+    "category": "Commercial Bank",
+    "name": "Samurdhi Bank",
+    "emoji": "🏦",
+    "color": "#f59e0b",
+    "lat": 7.68367,
+    "lon": 80.64369
+  },
+  {
+    "id": "poi_112",
+    "type": "police",
+    "category": "Police Station",
+    "name": "Police Station - Naula",
+    "emoji": "👮",
+    "color": "#3b82f6",
+    "lat": 7.69262,
+    "lon": 80.65016
+  },
+  {
+    "id": "poi_113",
+    "type": "bank",
+    "category": "Commercial Bank",
+    "name": "Bank of Ceylon",
+    "emoji": "🏦",
+    "color": "#f59e0b",
+    "lat": 7.70356,
+    "lon": 80.65387
+  },
+  {
+    "id": "poi_114",
+    "type": "bank",
+    "category": "Commercial Bank",
+    "name": "Regional Development Bank",
+    "emoji": "🏦",
+    "color": "#f59e0b",
+    "lat": 7.70394,
+    "lon": 80.65336
+  },
+  {
+    "id": "poi_115",
+    "type": "bank",
+    "category": "Commercial Bank",
+    "name": "NSB",
+    "emoji": "🏦",
+    "color": "#f59e0b",
+    "lat": 7.70591,
+    "lon": 80.65335
+  },
+  {
+    "id": "poi_116",
+    "type": "post_office",
+    "category": "Post Office",
+    "name": "Post Office - Naula",
+    "emoji": "📮",
+    "color": "#8b5cf6",
+    "lat": 7.70637,
+    "lon": 80.65383
+  },
+  {
+    "id": "poi_117",
+    "type": "post_office",
+    "category": "Post Office",
+    "name": "Lenadora-Sub Post Office",
+    "emoji": "📮",
+    "color": "#8b5cf6",
+    "lat": 7.75295,
+    "lon": 80.6615
+  },
+  {
+    "id": "poi_118",
+    "type": "atm",
+    "category": "ATM Facility",
+    "name": "Commercial Bank ATM",
+    "emoji": "💳",
+    "color": "#fbbf24",
+    "lat": 7.67786,
+    "lon": 80.7065
+  },
+  {
+    "id": "poi_119",
+    "type": "post_office",
+    "category": "Post Office",
+    "name": "Ketawala Junction Sub Post Office",
+    "emoji": "📮",
+    "color": "#8b5cf6",
+    "lat": 7.61437,
+    "lon": 80.65021
+  },
+  {
+    "id": "poi_120",
+    "type": "post_office",
+    "category": "Post Office",
+    "name": "Mahawela Post Office",
+    "emoji": "📮",
+    "color": "#8b5cf6",
+    "lat": 7.58009,
+    "lon": 80.61144
+  },
+  {
+    "id": "poi_121",
+    "type": "bank",
+    "category": "Commercial Bank",
+    "name": "Co Op Rural Bank",
+    "emoji": "🏦",
+    "color": "#f59e0b",
+    "lat": 7.57824,
+    "lon": 80.62666
+  },
+  {
+    "id": "poi_122",
+    "type": "bank",
+    "category": "Commercial Bank",
+    "name": "BOC Hettipola",
+    "emoji": "🏦",
+    "color": "#f59e0b",
+    "lat": 7.53559,
+    "lon": 80.91376
+  },
+  {
+    "id": "poi_123",
+    "type": "bank",
+    "category": "Commercial Bank",
+    "name": "Peoples Bank",
+    "emoji": "🏦",
+    "color": "#f59e0b",
+    "lat": 7.53852,
+    "lon": 80.91516
+  },
+  {
+    "id": "poi_124",
+    "type": "bank",
+    "category": "Commercial Bank",
+    "name": "Regional Development bank",
+    "emoji": "🏦",
+    "color": "#f59e0b",
+    "lat": 7.54091,
+    "lon": 80.91638
+  },
+  {
+    "id": "poi_125",
+    "type": "pharmacy",
+    "category": "Pharmacy / Medical",
+    "name": "Dinith pharmacy",
+    "emoji": "💊",
+    "color": "#10b981",
+    "lat": 7.53806,
+    "lon": 80.91472
+  },
+  {
+    "id": "poi_126",
+    "type": "post_office",
+    "category": "Post Office",
+    "name": "Post office- Wilgamuwa",
+    "emoji": "📮",
+    "color": "#8b5cf6",
+    "lat": 7.53993,
+    "lon": 80.91666
+  },
+  {
+    "id": "poi_127",
+    "type": "post_office",
+    "category": "Post Office",
+    "name": "Nugagolla Sub Post Office",
+    "emoji": "📮",
+    "color": "#8b5cf6",
+    "lat": 7.49661,
+    "lon": 80.92704
+  },
+  {
+    "id": "poi_128",
+    "type": "post_office",
+    "category": "Post Office",
+    "name": NaN,
+    "emoji": "📮",
+    "color": "#8b5cf6",
+    "lat": 7.42146,
+    "lon": 80.63347
+  },
+  {
+    "id": "poi_129",
+    "type": "atm",
+    "category": "ATM Facility",
+    "name": "HNB",
+    "emoji": "💳",
+    "color": "#fbbf24",
+    "lat": 7.94999,
+    "lon": 80.74872
+  },
+  {
+    "id": "poi_130",
+    "type": "police",
+    "category": "Police Station",
+    "name": "Rattota Police Station",
+    "emoji": "👮",
+    "color": "#3b82f6",
+    "lat": 7.52065,
+    "lon": 80.67889
+  },
+  {
+    "id": "poi_131",
+    "type": "post_office",
+    "category": "Post Office",
+    "name": "Rattota Post Office",
+    "emoji": "📮",
+    "color": "#8b5cf6",
+    "lat": 7.52097,
+    "lon": 80.67884
+  },
+  {
+    "id": "poi_132",
+    "type": "police",
+    "category": "Police Station",
+    "name": "Sigiriya Police Station",
+    "emoji": "👮",
+    "color": "#3b82f6",
+    "lat": 7.94243,
+    "lon": 80.7326
+  },
+  {
+    "id": "poi_133",
+    "type": "bank",
+    "category": "Commercial Bank",
+    "name": "Bank of Ceylon ATM",
+    "emoji": "🏦",
+    "color": "#f59e0b",
+    "lat": 7.4383,
+    "lon": 80.57211
+  },
+  {
+    "id": "poi_134",
+    "type": "bank",
+    "category": "Commercial Bank",
+    "name": "BOC",
+    "emoji": "🏦",
+    "color": "#f59e0b",
+    "lat": 7.38119,
+    "lon": 80.58653
+  },
+  {
+    "id": "poi_135",
+    "type": "post_office",
+    "category": "Post Office",
+    "name": "Ihalamulla Sub Post Office",
+    "emoji": "📮",
+    "color": "#8b5cf6",
+    "lat": 7.44596,
+    "lon": 80.56682
+  },
+  {
+    "id": "poi_136",
+    "type": "post_office",
+    "category": "Post Office",
+    "name": "Banilagolla Post Office",
+    "emoji": "📮",
+    "color": "#8b5cf6",
+    "lat": 7.41962,
+    "lon": 80.56543
+  },
+  {
+    "id": "poi_137",
+    "type": "bank",
+    "category": "Commercial Bank",
+    "name": "Bank of Ceylon",
+    "emoji": "🏦",
+    "color": "#f59e0b",
+    "lat": 8.04086,
+    "lon": 80.90587
+  },
+  {
+    "id": "poi_138",
+    "type": "post_office",
+    "category": "Post Office",
+    "name": NaN,
+    "emoji": "📮",
+    "color": "#8b5cf6",
+    "lat": 7.95023,
+    "lon": 80.75086
+  },
+  {
+    "id": "poi_139",
+    "type": "atm",
+    "category": "ATM Facility",
+    "name": "People's Bank ATM",
+    "emoji": "💳",
+    "color": "#fbbf24",
+    "lat": 7.54878,
+    "lon": 80.49306
+  },
+  {
+    "id": "poi_140",
+    "type": "bank",
+    "category": "Commercial Bank",
+    "name": "People's Bank",
+    "emoji": "🏦",
+    "color": "#f59e0b",
+    "lat": 7.54878,
+    "lon": 80.49291
+  },
+  {
+    "id": "poi_141",
+    "type": "post_office",
+    "category": "Post Office",
+    "name": "Rideegama Post Office",
+    "emoji": "📮",
+    "color": "#8b5cf6",
+    "lat": 7.54893,
+    "lon": 80.49281
+  },
+  {
+    "id": "poi_142",
+    "type": "police",
+    "category": "Police Station",
+    "name": "Habarana Police Station",
+    "emoji": "👮",
+    "color": "#3b82f6",
+    "lat": 8.03946,
+    "lon": 80.75665
+  },
+  {
+    "id": "poi_143",
+    "type": "police",
+    "category": "Police Station",
+    "name": "Gokarella Police Station",
+    "emoji": "👮",
+    "color": "#3b82f6",
+    "lat": 7.59539,
+    "lon": 80.48023
+  },
+  {
+    "id": "poi_144",
+    "type": "police",
+    "category": "Police Station",
+    "name": "Hingurakgoda Police Station",
+    "emoji": "👮",
+    "color": "#3b82f6",
+    "lat": 8.04873,
+    "lon": 80.96586
+  },
+  {
+    "id": "poi_145",
+    "type": "atm",
+    "category": "ATM Facility",
+    "name": NaN,
+    "emoji": "💳",
+    "color": "#fbbf24",
+    "lat": 7.87174,
+    "lon": 80.65115
+  },
+  {
+    "id": "poi_146",
+    "type": "pharmacy",
+    "category": "Pharmacy / Medical",
+    "name": NaN,
+    "emoji": "💊",
+    "color": "#10b981",
+    "lat": 7.87243,
+    "lon": 80.65019
+  },
+  {
+    "id": "poi_147",
+    "type": "atm",
+    "category": "ATM Facility",
+    "name": NaN,
+    "emoji": "💳",
+    "color": "#fbbf24",
+    "lat": 7.87187,
+    "lon": 80.65116
+  },
+  {
+    "id": "poi_148",
+    "type": "post_office",
+    "category": "Post Office",
+    "name": "Post office",
+    "emoji": "📮",
+    "color": "#8b5cf6",
+    "lat": 7.53426,
+    "lon": 80.62702
+  },
+  {
+    "id": "poi_149",
+    "type": "atm",
+    "category": "ATM Facility",
+    "name": NaN,
+    "emoji": "💳",
+    "color": "#fbbf24",
+    "lat": 7.87965,
+    "lon": 80.6504
+  },
+  {
+    "id": "poi_150",
+    "type": "post_office",
+    "category": "Post Office",
+    "name": NaN,
+    "emoji": "📮",
+    "color": "#8b5cf6",
+    "lat": 7.40184,
+    "lon": 80.4752
+  },
+  {
+    "id": "poi_151",
+    "type": "post_office",
+    "category": "Post Office",
+    "name": NaN,
+    "emoji": "📮",
+    "color": "#8b5cf6",
+    "lat": 7.37027,
+    "lon": 80.49097
+  },
+  {
+    "id": "poi_152",
+    "type": "police",
+    "category": "Police Station",
+    "name": "Laggala Police Station",
+    "emoji": "👮",
+    "color": "#3b82f6",
+    "lat": 7.59456,
+    "lon": 80.83926
+  },
+  {
+    "id": "poi_153",
+    "type": "post_office",
+    "category": "Post Office",
+    "name": NaN,
+    "emoji": "📮",
+    "color": "#8b5cf6",
+    "lat": 7.93957,
+    "lon": 80.7266
+  },
+  {
+    "id": "poi_154",
+    "type": "atm",
+    "category": "ATM Facility",
+    "name": NaN,
+    "emoji": "💳",
+    "color": "#fbbf24",
+    "lat": 7.87799,
+    "lon": 80.65079
+  },
+  {
+    "id": "poi_155",
+    "type": "atm",
+    "category": "ATM Facility",
+    "name": NaN,
+    "emoji": "💳",
+    "color": "#fbbf24",
+    "lat": 7.87689,
+    "lon": 80.65102
+  },
+  {
+    "id": "poi_156",
+    "type": "post_office",
+    "category": "Post Office",
+    "name": "Sub Post office-Uduwa",
+    "emoji": "📮",
+    "color": "#8b5cf6",
+    "lat": 7.36227,
+    "lon": 80.48632
+  },
+  {
+    "id": "poi_157",
+    "type": "bank",
+    "category": "Commercial Bank",
+    "name": "Peoples Bank",
+    "emoji": "🏦",
+    "color": "#f59e0b",
+    "lat": 7.37318,
+    "lon": 80.52306
+  },
+  {
+    "id": "poi_158",
+    "type": "post_office",
+    "category": "Post Office",
+    "name": NaN,
+    "emoji": "📮",
+    "color": "#8b5cf6",
+    "lat": 7.62048,
+    "lon": 80.50427
+  },
+  {
+    "id": "poi_159",
+    "type": "bank",
+    "category": "Commercial Bank",
+    "name": "Bank of Ceylon",
+    "emoji": "🏦",
+    "color": "#f59e0b",
+    "lat": 7.63736,
+    "lon": 80.50515
+  },
+  {
+    "id": "poi_160",
+    "type": "bank",
+    "category": "Commercial Bank",
+    "name": NaN,
+    "emoji": "🏦",
+    "color": "#f59e0b",
+    "lat": 7.86743,
+    "lon": 80.65103
+  },
+  {
+    "id": "poi_161",
+    "type": "post_office",
+    "category": "Post Office",
+    "name": "Habarana Post Office",
+    "emoji": "📮",
+    "color": "#8b5cf6",
+    "lat": 8.04133,
+    "lon": 80.75615
+  },
+  {
+    "id": "poi_162",
+    "type": "post_office",
+    "category": "Post Office",
+    "name": "Madulkelle Post Office",
+    "emoji": "📮",
+    "color": "#8b5cf6",
+    "lat": 7.39878,
+    "lon": 80.73377
+  },
+  {
+    "id": "poi_163",
+    "type": "post_office",
+    "category": "Post Office",
+    "name": "Maussawa Post Office",
+    "emoji": "📮",
+    "color": "#8b5cf6",
+    "lat": 7.41966,
+    "lon": 80.72434
+  },
+  {
+    "id": "poi_164",
+    "type": "bank",
+    "category": "Commercial Bank",
+    "name": "People's Bank",
+    "emoji": "🏦",
+    "color": "#f59e0b",
+    "lat": 7.50701,
+    "lon": 80.65849
+  },
+  {
+    "id": "poi_165",
+    "type": "police",
+    "category": "Police Station",
+    "name": "Mahawela Police Station",
+    "emoji": "👮",
+    "color": "#3b82f6",
+    "lat": 7.58936,
+    "lon": 80.6102
+  },
+  {
+    "id": "poi_166",
+    "type": "police",
+    "category": "Police Station",
+    "name": NaN,
+    "emoji": "👮",
+    "color": "#3b82f6",
+    "lat": 7.45431,
+    "lon": 80.68231
+  },
+  {
+    "id": "poi_167",
+    "type": "bank",
+    "category": "Commercial Bank",
+    "name": "RDB Bank",
+    "emoji": "🏦",
+    "color": "#f59e0b",
+    "lat": 7.45406,
+    "lon": 80.68278
+  },
+  {
+    "id": "poi_168",
+    "type": "bank",
+    "category": "Commercial Bank",
+    "name": "Rattota people's Bank",
+    "emoji": "🏦",
+    "color": "#f59e0b",
+    "lat": 7.519,
+    "lon": 80.67741
+  },
+  {
+    "id": "poi_169",
+    "type": "bank",
+    "category": "Commercial Bank",
+    "name": "RRB BANK",
+    "emoji": "🏦",
+    "color": "#f59e0b",
+    "lat": 7.53025,
+    "lon": 80.62617
+  },
+  {
+    "id": "poi_170",
+    "type": "police",
+    "category": "Police Station",
+    "name": NaN,
+    "emoji": "👮",
+    "color": "#3b82f6",
+    "lat": 7.9534,
+    "lon": 80.7561
+  },
+  {
+    "id": "poi_171",
+    "type": "police",
+    "category": "Police Station",
+    "name": NaN,
+    "emoji": "👮",
+    "color": "#3b82f6",
+    "lat": 7.92564,
+    "lon": 80.99401
+  },
+  {
+    "id": "poi_172",
+    "type": "police",
+    "category": "Police Station",
+    "name": NaN,
+    "emoji": "👮",
+    "color": "#3b82f6",
+    "lat": 7.96521,
+    "lon": 80.99854
+  },
+  {
+    "id": "poi_173",
+    "type": "bank",
+    "category": "Commercial Bank",
+    "name": "People's Bank & ATM",
+    "emoji": "🏦",
+    "color": "#f59e0b",
+    "lat": 8.04066,
+    "lon": 80.59773
+  },
+  {
+    "id": "poi_174",
+    "type": "bank",
+    "category": "Commercial Bank",
+    "name": "Bank of Ceylon",
+    "emoji": "🏦",
+    "color": "#f59e0b",
+    "lat": 8.0402,
+    "lon": 80.59844
+  },
+  {
+    "id": "poi_175",
+    "type": "post_office",
+    "category": "Post Office",
+    "name": NaN,
+    "emoji": "📮",
+    "color": "#8b5cf6",
+    "lat": 8.02419,
+    "lon": 80.53559
+  },
+  {
+    "id": "poi_176",
+    "type": "atm",
+    "category": "ATM Facility",
+    "name": NaN,
+    "emoji": "💳",
+    "color": "#fbbf24",
+    "lat": 8.0417,
+    "lon": 80.59634
+  },
+  {
+    "id": "poi_177",
+    "type": "atm",
+    "category": "ATM Facility",
+    "name": NaN,
+    "emoji": "💳",
+    "color": "#fbbf24",
+    "lat": 7.43217,
+    "lon": 80.8462
+  },
+  {
+    "id": "poi_178",
+    "type": "pharmacy",
+    "category": "Pharmacy / Medical",
+    "name": "Royal Pharmacy",
+    "emoji": "💊",
+    "color": "#10b981",
+    "lat": 7.70514,
+    "lon": 80.65331
+  },
+  {
+    "id": "poi_179",
+    "type": "atm",
+    "category": "ATM Facility",
+    "name": NaN,
+    "emoji": "💳",
+    "color": "#fbbf24",
+    "lat": 7.95151,
+    "lon": 80.75384
+  },
+  {
+    "id": "poi_180",
+    "type": "atm",
+    "category": "ATM Facility",
+    "name": NaN,
+    "emoji": "💳",
+    "color": "#fbbf24",
+    "lat": 8.03675,
+    "lon": 80.75377
+  },
+  {
+    "id": "poi_181",
+    "type": "bank",
+    "category": "Commercial Bank",
+    "name": "gramiya bank",
+    "emoji": "🏦",
+    "color": "#f59e0b",
+    "lat": 7.45494,
+    "lon": 80.58296
+  },
+  {
+    "id": "poi_182",
+    "type": "post_office",
+    "category": "Post Office",
+    "name": "owiliknda post office",
+    "emoji": "📮",
+    "color": "#8b5cf6",
+    "lat": 7.4551,
+    "lon": 80.58272
+  },
+  {
+    "id": "poi_183",
+    "type": "post_office",
+    "category": "Post Office",
+    "name": "Matale Post Office",
+    "emoji": "📮",
+    "color": "#8b5cf6",
+    "lat": 7.46689,
+    "lon": 80.62345
+  },
+  {
+    "id": "poi_184",
+    "type": "pharmacy",
+    "category": "Pharmacy / Medical",
+    "name": "pharmacy",
+    "emoji": "💊",
+    "color": "#10b981",
+    "lat": 7.45474,
+    "lon": 80.58165
+  },
+  {
+    "id": "poi_185",
+    "type": "post_office",
+    "category": "Post Office",
+    "name": NaN,
+    "emoji": "📮",
+    "color": "#8b5cf6",
+    "lat": 7.92277,
+    "lon": 80.6829
+  },
+  {
+    "id": "poi_186",
+    "type": "atm",
+    "category": "ATM Facility",
+    "name": "ATM",
+    "emoji": "💳",
+    "color": "#fbbf24",
+    "lat": 7.95744,
+    "lon": 80.75285
+  },
+  {
+    "id": "poi_187",
+    "type": "atm",
+    "category": "ATM Facility",
+    "name": "ATM",
+    "emoji": "💳",
+    "color": "#fbbf24",
+    "lat": 7.95153,
+    "lon": 80.75378
+  },
+  {
+    "id": "poi_188",
+    "type": "bank",
+    "category": "Commercial Bank",
+    "name": NaN,
+    "emoji": "🏦",
+    "color": "#f59e0b",
+    "lat": 7.92924,
+    "lon": 80.68685
+  },
+  {
+    "id": "poi_189",
+    "type": "atm",
+    "category": "ATM Facility",
+    "name": NaN,
+    "emoji": "💳",
+    "color": "#fbbf24",
+    "lat": 8.03952,
+    "lon": 80.7556
+  },
+  {
+    "id": "poi_190",
+    "type": "atm",
+    "category": "ATM Facility",
+    "name": NaN,
+    "emoji": "💳",
+    "color": "#fbbf24",
+    "lat": 8.03914,
+    "lon": 80.75531
+  },
+  {
+    "id": "poi_191",
+    "type": "bank",
+    "category": "Commercial Bank",
+    "name": "People’s Bank",
+    "emoji": "🏦",
+    "color": "#f59e0b",
+    "lat": 7.36988,
+    "lon": 80.61737
+  },
+  {
+    "id": "fuel_192",
+    "type": "fuel",
+    "category": "Fuel Station",
+    "name": "Ceypetco Filling Station",
+    "emoji": "⛽",
+    "color": "#f97316",
+    "lat": 8.03994,
+    "lon": 80.75567
+  },
+  {
+    "id": "fuel_193",
+    "type": "fuel",
+    "category": "Fuel Station",
+    "name": "Ceypetco Filling Station",
+    "emoji": "⛽",
+    "color": "#f97316",
+    "lat": 7.88489,
+    "lon": 80.6517
+  },
+  {
+    "id": "fuel_194",
+    "type": "fuel",
+    "category": "Fuel Station",
+    "name": NaN,
+    "emoji": "⛽",
+    "color": "#f97316",
+    "lat": 7.57381,
+    "lon": 80.46616
+  },
+  {
+    "id": "fuel_195",
+    "type": "fuel",
+    "category": "Fuel Station",
+    "name": "Ceypetco Gas Station",
+    "emoji": "⛽",
+    "color": "#f97316",
+    "lat": 7.81069,
+    "lon": 80.61272
+  },
+  {
+    "id": "fuel_196",
+    "type": "fuel",
+    "category": "Fuel Station",
+    "name": NaN,
+    "emoji": "⛽",
+    "color": "#f97316",
+    "lat": 7.75193,
+    "lon": 80.56347
+  },
+  {
+    "id": "fuel_197",
+    "type": "fuel",
+    "category": "Fuel Station",
+    "name": NaN,
+    "emoji": "⛽",
+    "color": "#f97316",
+    "lat": 8.03557,
+    "lon": 80.59923
+  },
+  {
+    "id": "fuel_198",
+    "type": "fuel",
+    "category": "Fuel Station",
+    "name": NaN,
+    "emoji": "⛽",
+    "color": "#f97316",
+    "lat": 8.0389,
+    "lon": 80.90561
+  },
+  {
+    "id": "fuel_199",
+    "type": "fuel",
+    "category": "Fuel Station",
+    "name": NaN,
+    "emoji": "⛽",
+    "color": "#f97316",
+    "lat": 8.04056,
+    "lon": 80.95052
+  },
+  {
+    "id": "fuel_200",
+    "type": "fuel",
+    "category": "Fuel Station",
+    "name": "Ceypetco",
+    "emoji": "⛽",
+    "color": "#f97316",
+    "lat": 7.36165,
+    "lon": 80.71427
+  },
+  {
+    "id": "fuel_201",
+    "type": "fuel",
+    "category": "Fuel Station",
+    "name": "Sinopec Filling Station",
+    "emoji": "⛽",
+    "color": "#f97316",
+    "lat": 7.88181,
+    "lon": 80.64948
+  },
+  {
+    "id": "fuel_202",
+    "type": "fuel",
+    "category": "Fuel Station",
+    "name": "IOC Filling Station",
+    "emoji": "⛽",
+    "color": "#f97316",
+    "lat": 7.87471,
+    "lon": 80.65147
+  },
+  {
+    "id": "fuel_203",
+    "type": "fuel",
+    "category": "Fuel Station",
+    "name": "Lanka IOC Petrol Station -Pallepola",
+    "emoji": "⛽",
+    "color": "#f97316",
+    "lat": 7.62759,
+    "lon": 80.60579
+  },
+  {
+    "id": "fuel_204",
+    "type": "fuel",
+    "category": "Fuel Station",
+    "name": "ceypetco filling stations",
+    "emoji": "⛽",
+    "color": "#f97316",
+    "lat": 7.69998,
+    "lon": 80.6533
+  },
+  {
+    "id": "fuel_205",
+    "type": "fuel",
+    "category": "Fuel Station",
+    "name": "CO-OP Filling Station",
+    "emoji": "⛽",
+    "color": "#f97316",
+    "lat": 7.70781,
+    "lon": 80.65383
+  },
+  {
+    "id": "fuel_206",
+    "type": "fuel",
+    "category": "Fuel Station",
+    "name": "Ceypectco filling station",
+    "emoji": "⛽",
+    "color": "#f97316",
+    "lat": 7.75871,
+    "lon": 80.66158
+  },
+  {
+    "id": "fuel_207",
+    "type": "fuel",
+    "category": "Fuel Station",
+    "name": "Ceypetco Filling Station",
+    "emoji": "⛽",
+    "color": "#f97316",
+    "lat": 7.5352,
+    "lon": 80.90071
+  },
+  {
+    "id": "fuel_208",
+    "type": "fuel",
+    "category": "Fuel Station",
+    "name": "Ankumbura Filling Station",
+    "emoji": "⛽",
+    "color": "#f97316",
+    "lat": 7.42528,
+    "lon": 80.56411
+  },
+  {
+    "id": "fuel_209",
+    "type": "fuel",
+    "category": "Fuel Station",
+    "name": "Ceypetco",
+    "emoji": "⛽",
+    "color": "#f97316",
+    "lat": 8.03513,
+    "lon": 80.59999
+  },
+  {
+    "id": "fuel_210",
+    "type": "fuel",
+    "category": "Fuel Station",
+    "name": "Ceypetco Filling Station",
+    "emoji": "⛽",
+    "color": "#f97316",
+    "lat": 7.54801,
+    "lon": 80.48945
+  },
+  {
+    "id": "fuel_211",
+    "type": "fuel",
+    "category": "Fuel Station",
+    "name": "Lanka Filling Station",
+    "emoji": "⛽",
+    "color": "#f97316",
+    "lat": 8.03593,
+    "lon": 80.47947
+  },
+  {
+    "id": "fuel_212",
+    "type": "fuel",
+    "category": "Fuel Station",
+    "name": NaN,
+    "emoji": "⛽",
+    "color": "#f97316",
+    "lat": 7.9344,
+    "lon": 80.69032
+  },
+  {
+    "id": "fuel_213",
+    "type": "fuel",
+    "category": "Fuel Station",
+    "name": "Lanka IOC",
+    "emoji": "⛽",
+    "color": "#f97316",
+    "lat": 7.46772,
+    "lon": 80.62367
+  },
+  {
+    "id": "fuel_214",
+    "type": "fuel",
+    "category": "Fuel Station",
+    "name": "Lanka IOC",
+    "emoji": "⛽",
+    "color": "#f97316",
+    "lat": 7.57275,
+    "lon": 80.46619
+  },
+  {
+    "id": "fuel_215",
+    "type": "fuel",
+    "category": "Fuel Station",
+    "name": "Lanka Filling Station",
+    "emoji": "⛽",
+    "color": "#f97316",
+    "lat": 7.57384,
+    "lon": 80.46667
+  },
+  {
+    "id": "fuel_216",
+    "type": "fuel",
+    "category": "Fuel Station",
+    "name": NaN,
+    "emoji": "⛽",
+    "color": "#f97316",
+    "lat": 7.65173,
+    "lon": 80.51693
+  },
+  {
+    "id": "fuel_217",
+    "type": "fuel",
+    "category": "Fuel Station",
+    "name": "Lakruka Fuel station",
+    "emoji": "⛽",
+    "color": "#f97316",
+    "lat": 7.62721,
+    "lon": 80.63647
+  },
+  {
+    "id": "fuel_218",
+    "type": "fuel",
+    "category": "Fuel Station",
+    "name": "Lanka Filling Station",
+    "emoji": "⛽",
+    "color": "#f97316",
+    "lat": 7.59898,
+    "lon": 80.4811
+  },
+  {
+    "id": "fuel_219",
+    "type": "fuel",
+    "category": "Fuel Station",
+    "name": NaN,
+    "emoji": "⛽",
+    "color": "#f97316",
+    "lat": 7.63938,
+    "lon": 80.50694
+  },
+  {
+    "id": "fuel_220",
+    "type": "fuel",
+    "category": "Fuel Station",
+    "name": "Rattota Lanka filling station",
+    "emoji": "⛽",
+    "color": "#f97316",
+    "lat": 7.51896,
+    "lon": 80.67614
+  },
+  {
+    "id": "fuel_221",
+    "type": "fuel",
+    "category": "Fuel Station",
+    "name": "Palapathwela Ceypetco Filling Station",
+    "emoji": "⛽",
+    "color": "#f97316",
+    "lat": 7.53478,
+    "lon": 80.62725
+  },
+  {
+    "id": "fuel_222",
+    "type": "fuel",
+    "category": "Fuel Station",
+    "name": NaN,
+    "emoji": "⛽",
+    "color": "#f97316",
+    "lat": 8.03397,
+    "lon": 80.77071
+  },
+  {
+    "id": "fuel_223",
+    "type": "fuel",
+    "category": "Fuel Station",
+    "name": NaN,
+    "emoji": "⛽",
+    "color": "#f97316",
+    "lat": 7.51581,
+    "lon": 80.62345
+  },
+  {
+    "id": "fuel_224",
+    "type": "fuel",
+    "category": "Fuel Station",
+    "name": NaN,
+    "emoji": "⛽",
+    "color": "#f97316",
+    "lat": 7.50312,
+    "lon": 80.62211
+  }
+]

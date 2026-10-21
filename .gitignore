@@ -1,0 +1,90 @@
+# ============================================================
+# UrbanScapes-LK — .gitignore
+# ============================================================
+
+# ------ Large GIS / Raster / Binary data files ------
+spatial_optimization/data/*.tif
+spatial_optimization/data/*.npy
+spatial_optimization/data/*.shp
+spatial_optimization/data/*.dbf
+spatial_optimization/data/*.shx
+spatial_optimization/data/*.cpg
+spatial_optimization/data/*.prj
+spatial_optimization/data/*.sbn
+spatial_optimization/data/*.sbx
+spatial_optimization/data/*.xml
+spatial_optimization/data/*.qmd
+
+# Keep these small JSON data files (committed)
+!spatial_optimization/data/matale_boundary.geojson
+!spatial_optimization/data/matale_clean_boundary.json
+!spatial_optimization/data/matale_critical_utilities.json
+!spatial_optimization/data/matale_major_highways.json
+!spatial_optimization/data/matale_spotlight_mask.json
+!spatial_optimization/data/matale_buildings_summary.json
+!spatial_optimization/data/README
+
+# ------ Output images / large exports ------
+spatial_optimization/outputs/*.png
+spatial_optimization/outputs/*.tif
+spatial_optimization/outputs/*.jpg
+
+# Keep pre-cached GeoJSON outputs (small, needed at runtime)
+!spatial_optimization/outputs/matale_waterways.geojson
+!spatial_optimization/outputs/facilities_geojson.json
+
+# ------ Python ------
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.Python
+*.egg-info/
+dist/
+build/
+*.egg
+.eggs/
+*.whl
+pip-wheel-metadata/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+htmlcov/
+.coverage
+.coverage.*
+coverage.xml
+*.cover
+*.log
+
+# ------ Virtual environments ------
+.venv/
+venv/
+env/
+ENV/
+
+# ------ Node / Next.js (other components) ------
+node_modules/
+.next/
+out/
+.vercel/
+*.tsbuildinfo
+.npm
+
+# ------ IDEs & editors ------
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+.DS_Store
+Thumbs.db
+
+# ------ Antigravity / Agent internals ------
+.gemini/
+
+# ------ Misc ------
+*.bak
+*.tmp
+~$*

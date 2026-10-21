@@ -1,0 +1,18 @@
+[
+  {
+    "optimal_x": 92.2056,
+    "optimal_y": 97.2647,
+    "elevation_z": 469.57,
+    "suitability_score": 0.756777,
+    "algorithm": "Genetic Algorithm",
+    "execution_time_seconds": 0.276
+  },
+  {
+    "optimal_x": 91.991,
+    "optimal_y": 96.712,
+    "elevation_z": 469.57,
+    "suitability_score": 0.756777,
+    "algorithm": "Particle Swarm Optimization",
+    "execution_time_seconds": 0.2371
+  }
+]
