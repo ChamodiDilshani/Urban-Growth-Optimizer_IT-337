@@ -6,6 +6,7 @@ import MetricsDisplay from './components/MetricsDisplay';
 import ShapExplainer from './components/ShapExplainer';
 import HistoryModal from './components/HistoryModal';
 import { api } from './services/api';
+import colomboSuburbsCoords from './data/colomboSuburbsCoords.json';
 
 export default function App() {
   // Metadata from backend
@@ -19,15 +20,15 @@ export default function App() {
   const [isLoadingMetadata, setIsLoadingMetadata] = useState(true);
   const [backendError, setBackendError] = useState(null);
 
-  // Form parameters (matching Streamlit defaults)
+  // Form parameters (matching Streamlit defaults with validated Colombo coordinates)
   const [params, setParams] = useState({
     suburb: 'athurugiriya',
     land_size: 12.0,
     land_type: 'Residential',
     road_width: '15 ft',
     target_year: 2026,
-    lat: 6.9022,
-    lon: 79.9172,
+    lat: 6.8770,
+    lon: 79.9904,
   });
 
   // Output from model inference
@@ -42,6 +43,17 @@ export default function App() {
 
   const debounceTimerRef = useRef(null);
 
+  // Suburb change handler (auto-centers map to suburb coordinates within Colombo district)
+  const handleSuburbChange = useCallback((newSuburb) => {
+    const key = newSuburb.toLowerCase().trim();
+    const coord = colomboSuburbsCoords[key];
+    setParams((prev) => ({
+      ...prev,
+      suburb: newSuburb,
+      ...(coord ? { lat: coord.lat, lon: coord.lon } : {}),
+    }));
+  }, []);
+
   // 1. Initial Metadata Load
   useEffect(() => {
     async function loadMeta() {
@@ -54,11 +66,17 @@ export default function App() {
 
           // Set default suburb if not already set or invalid
           if (res.data.suburbs?.length > 0) {
-            setParams((p) => ({
-              ...p,
-              suburb: res.data.suburbs.includes(p.suburb) ? p.suburb : res.data.suburbs[0],
-              land_type: res.data.land_types.includes(p.land_type) ? p.land_type : res.data.land_types[0],
-            }));
+            setParams((p) => {
+              const activeSub = res.data.suburbs.includes(p.suburb) ? p.suburb : res.data.suburbs[0];
+              const key = activeSub.toLowerCase().trim();
+              const coord = colomboSuburbsCoords[key];
+              return {
+                ...p,
+                suburb: activeSub,
+                land_type: res.data.land_types.includes(p.land_type) ? p.land_type : res.data.land_types[0],
+                ...(coord ? { lat: coord.lat, lon: coord.lon } : {}),
+              };
+            });
           }
         }
       } catch (err) {
@@ -227,6 +245,7 @@ export default function App() {
         setParams={setParams}
         onOpenHistory={() => setIsHistoryOpen(true)}
         historyCount={historyList.length}
+        onSuburbChange={handleSuburbChange}
       />
 
       {/* Main Canvas Area */}
@@ -248,6 +267,7 @@ export default function App() {
             onCoordsChange={handleCoordsChange}
             distFort={valuation?.dist_fort ?? 14.89}
             isFloodRisk={valuation?.is_flood_risk ?? false}
+            suburb={params.suburb}
           />
 
           {/* Column 2: Valuation, Tax Metrics, PDF Download & SHAP */}

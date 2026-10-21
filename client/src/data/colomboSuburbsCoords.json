@@ -1,0 +1,802 @@
+{
+  "narahenpita": {
+    "name": "Narahenpita",
+    "lat": 6.898,
+    "lon": 79.882
+  },
+  "aluthkade": {
+    "name": "aluthkade",
+    "lat": 6.938,
+    "lon": 79.859
+  },
+  "angulana": {
+    "name": "angulana",
+    "lat": 6.804,
+    "lon": 79.882
+  },
+  "arangala": {
+    "name": "arangala",
+    "lat": 6.897,
+    "lon": 79.973
+  },
+  "athurugiriya": {
+    "name": "athurugiriya",
+    "lat": 6.877,
+    "lon": 79.9904
+  },
+  "attidiya": {
+    "name": "attidiya",
+    "lat": 6.843,
+    "lon": 79.888
+  },
+  "avissawella": {
+    "name": "avissawella",
+    "lat": 6.9536,
+    "lon": 80.205
+  },
+  "bambalapitiya": {
+    "name": "bambalapitiya",
+    "lat": 6.8925,
+    "lon": 79.8553
+  },
+  "bangalawatta": {
+    "name": "bangalawatta",
+    "lat": 6.839,
+    "lon": 79.92
+  },
+  "batakettara": {
+    "name": "batakettara",
+    "lat": 6.812,
+    "lon": 79.932
+  },
+  "batawala": {
+    "name": "batawala",
+    "lat": 6.849,
+    "lon": 80.082
+  },
+  "battaramulla": {
+    "name": "battaramulla",
+    "lat": 6.9016,
+    "lon": 79.9261
+  },
+  "batuwandara": {
+    "name": "batuwandara",
+    "lat": 6.808,
+    "lon": 79.947
+  },
+  "bellanwila": {
+    "name": "bellanwila",
+    "lat": 6.848,
+    "lon": 79.891
+  },
+  "bokundara": {
+    "name": "bokundara",
+    "lat": 6.824,
+    "lon": 79.927
+  },
+  "bomiriya": {
+    "name": "bomiriya",
+    "lat": 6.938,
+    "lon": 79.998
+  },
+  "bope": {
+    "name": "bope",
+    "lat": 6.864,
+    "lon": 80.125
+  },
+  "boralesgamuwa": {
+    "name": "boralesgamuwa",
+    "lat": 6.842,
+    "lon": 79.902
+  },
+  "borella": {
+    "name": "borella",
+    "lat": 6.9147,
+    "lon": 79.8778
+  },
+  "borupana": {
+    "name": "borupana",
+    "lat": 6.818,
+    "lon": 79.889
+  },
+  "buthgamuwa": {
+    "name": "buthgamuwa",
+    "lat": 6.918,
+    "lon": 79.905
+  },
+  "dampe": {
+    "name": "dampe",
+    "lat": 6.815,
+    "lon": 79.965
+  },
+  "dedigamuwa": {
+    "name": "dedigamuwa",
+    "lat": 6.915,
+    "lon": 80.02
+  },
+  "dehiwala": {
+    "name": "dehiwala",
+    "lat": 6.8344,
+    "lon": 79.8667
+  },
+  "delthara": {
+    "name": "delthara",
+    "lat": 6.806,
+    "lon": 79.929
+  },
+  "dematagoda": {
+    "name": "dematagoda",
+    "lat": 6.928,
+    "lon": 79.878
+  },
+  "depanama": {
+    "name": "depanama",
+    "lat": 6.862,
+    "lon": 79.948
+  },
+  "divulpitiya": {
+    "name": "divulpitiya",
+    "lat": 6.849,
+    "lon": 79.906
+  },
+  "diyagama": {
+    "name": "diyagama",
+    "lat": 6.832,
+    "lon": 80.019
+  },
+  "ethulkotte": {
+    "name": "ethulkotte",
+    "lat": 6.901,
+    "lon": 79.903
+  },
+  "gangodawila": {
+    "name": "gangodawila",
+    "lat": 6.865,
+    "lon": 79.895
+  },
+  "godagama": {
+    "name": "godagama",
+    "lat": 6.845,
+    "lon": 80.038
+  },
+  "gorakapitiya": {
+    "name": "gorakapitiya",
+    "lat": 6.808,
+    "lon": 79.935
+  },
+  "gothatuwa": {
+    "name": "gothatuwa",
+    "lat": 6.925,
+    "lon": 79.905
+  },
+  "grandpass": {
+    "name": "grandpass",
+    "lat": 6.951,
+    "lon": 79.868
+  },
+  "habarakada": {
+    "name": "habarakada",
+    "lat": 6.873,
+    "lon": 80.021
+  },
+  "halpita": {
+    "name": "halpita",
+    "lat": 6.818,
+    "lon": 79.952
+  },
+  "hanwella": {
+    "name": "hanwella",
+    "lat": 6.9,
+    "lon": 80.0833
+  },
+  "havelock town": {
+    "name": "havelock town",
+    "lat": 6.883,
+    "lon": 79.865
+  },
+  "himbutana": {
+    "name": "himbutana",
+    "lat": 6.92,
+    "lon": 79.928
+  },
+  "hokandara": {
+    "name": "hokandara",
+    "lat": 6.877,
+    "lon": 79.957
+  },
+  "homagama": {
+    "name": "homagama",
+    "lat": 6.843,
+    "lon": 80.0031
+  },
+  "honnanthara": {
+    "name": "honnanthara",
+    "lat": 6.819,
+    "lon": 79.945
+  },
+  "jalthara": {
+    "name": "jalthara",
+    "lat": 6.878,
+    "lon": 80.062
+  },
+  "jambugasmulla": {
+    "name": "jambugasmulla",
+    "lat": 6.869,
+    "lon": 79.893
+  },
+  "jamburaliya": {
+    "name": "jamburaliya",
+    "lat": 6.802,
+    "lon": 79.962
+  },
+  "kadugoda": {
+    "name": "kadugoda",
+    "lat": 6.901,
+    "lon": 80.071
+  },
+  "kaduwela": {
+    "name": "kaduwela",
+    "lat": 6.9328,
+    "lon": 79.9835
+  },
+  "kahahena": {
+    "name": "kahahena",
+    "lat": 6.871,
+    "lon": 80.045
+  },
+  "kahapola": {
+    "name": "kahapola",
+    "lat": 6.792,
+    "lon": 79.965
+  },
+  "kahathuduwa": {
+    "name": "kahathuduwa",
+    "lat": 6.809,
+    "lon": 80.008
+  },
+  "kahawala": {
+    "name": "kahawala",
+    "lat": 6.852,
+    "lon": 80.048
+  },
+  "kalalgoda": {
+    "name": "kalalgoda",
+    "lat": 6.871,
+    "lon": 79.948
+  },
+  "kalapaluwawa": {
+    "name": "kalapaluwawa",
+    "lat": 6.907,
+    "lon": 79.912
+  },
+  "kaldemulla": {
+    "name": "kaldemulla",
+    "lat": 6.817,
+    "lon": 79.882
+  },
+  "kalubowila": {
+    "name": "kalubowila",
+    "lat": 6.867,
+    "lon": 79.877
+  },
+  "karagampitiya": {
+    "name": "karagampitiya",
+    "lat": 6.828,
+    "lon": 79.871
+  },
+  "katubedda": {
+    "name": "katubedda",
+    "lat": 6.797,
+    "lon": 79.888
+  },
+  "katukurunda": {
+    "name": "katukurunda",
+    "lat": 6.778,
+    "lon": 79.885
+  },
+  "katuwawala": {
+    "name": "katuwawala",
+    "lat": 6.829,
+    "lon": 79.914
+  },
+  "kawdana": {
+    "name": "kawdana",
+    "lat": 6.839,
+    "lon": 79.873
+  },
+  "kelanimulla": {
+    "name": "kelanimulla",
+    "lat": 6.938,
+    "lon": 79.918
+  },
+  "kesbewa": {
+    "name": "kesbewa",
+    "lat": 6.791,
+    "lon": 79.949
+  },
+  "kirigampamunuwa": {
+    "name": "kirigampamunuwa",
+    "lat": 6.838,
+    "lon": 79.942
+  },
+  "kiriwattuduwa": {
+    "name": "kiriwattuduwa",
+    "lat": 6.812,
+    "lon": 80.038
+  },
+  "kirulapone": {
+    "name": "kirulapone",
+    "lat": 6.883,
+    "lon": 79.874
+  },
+  "kohuwala": {
+    "name": "kohuwala",
+    "lat": 6.858,
+    "lon": 79.883
+  },
+  "kolamunna": {
+    "name": "kolamunna",
+    "lat": 6.798,
+    "lon": 79.923
+  },
+  "kollupitiya": {
+    "name": "kollupitiya",
+    "lat": 6.9147,
+    "lon": 79.8517
+  },
+  "kolonnawa": {
+    "name": "kolonnawa",
+    "lat": 6.929,
+    "lon": 79.894
+  },
+  "korathota": {
+    "name": "korathota",
+    "lat": 6.912,
+    "lon": 79.998
+  },
+  "kosgama": {
+    "name": "kosgama",
+    "lat": 6.938,
+    "lon": 80.148
+  },
+  "koswatta": {
+    "name": "koswatta",
+    "lat": 6.908,
+    "lon": 79.928
+  },
+  "kotikawatta": {
+    "name": "kotikawatta",
+    "lat": 6.928,
+    "lon": 79.906
+  },
+  "kottawa": {
+    "name": "kottawa",
+    "lat": 6.845,
+    "lon": 79.965
+  },
+  "kotuvila": {
+    "name": "kotuvila",
+    "lat": 6.945,
+    "lon": 79.882
+  },
+  "kumaragewatta": {
+    "name": "kumaragewatta",
+    "lat": 6.908,
+    "lon": 79.932
+  },
+  "kurunduwatta": {
+    "name": "kurunduwatta",
+    "lat": 6.908,
+    "lon": 79.869
+  },
+  "lakshapathiya": {
+    "name": "lakshapathiya",
+    "lat": 6.792,
+    "lon": 79.885
+  },
+  "madampitiya": {
+    "name": "madampitiya",
+    "lat": 6.953,
+    "lon": 79.872
+  },
+  "madapatha": {
+    "name": "madapatha",
+    "lat": 6.802,
+    "lon": 79.958
+  },
+  "madiwela": {
+    "name": "madiwela",
+    "lat": 6.878,
+    "lon": 79.928
+  },
+  "magammana": {
+    "name": "magammana",
+    "lat": 6.839,
+    "lon": 80.025
+  },
+  "mahalwarawa": {
+    "name": "mahalwarawa",
+    "lat": 6.841,
+    "lon": 79.972
+  },
+  "maharagama": {
+    "name": "maharagama",
+    "lat": 6.848,
+    "lon": 79.9267
+  },
+  "makandana": {
+    "name": "makandana",
+    "lat": 6.798,
+    "lon": 79.978
+  },
+  "makuludoowa": {
+    "name": "makuludoowa",
+    "lat": 6.828,
+    "lon": 79.935
+  },
+  "makumbura": {
+    "name": "makumbura",
+    "lat": 6.843,
+    "lon": 79.988
+  },
+  "malabe": {
+    "name": "malabe",
+    "lat": 6.9042,
+    "lon": 79.9548
+  },
+  "malapalla": {
+    "name": "malapalla",
+    "lat": 6.852,
+    "lon": 79.982
+  },
+  "maradana": {
+    "name": "maradana",
+    "lat": 6.928,
+    "lon": 79.865
+  },
+  "mattakkuliya": {
+    "name": "mattakkuliya",
+    "lat": 6.972,
+    "lon": 79.869
+  },
+  "mattegoda": {
+    "name": "mattegoda",
+    "lat": 6.824,
+    "lon": 79.968
+  },
+  "mavittara": {
+    "name": "mavittara",
+    "lat": 6.812,
+    "lon": 79.938
+  },
+  "meegoda": {
+    "name": "meegoda",
+    "lat": 6.848,
+    "lon": 80.065
+  },
+  "mirihana": {
+    "name": "mirihana",
+    "lat": 6.872,
+    "lon": 79.902
+  },
+  "modara": {
+    "name": "modara",
+    "lat": 6.96,
+    "lon": 79.866
+  },
+  "moonamale": {
+    "name": "moonamale",
+    "lat": 6.912,
+    "lon": 80.122
+  },
+  "moratumulla": {
+    "name": "moratumulla",
+    "lat": 6.782,
+    "lon": 79.885
+  },
+  "moratuwa": {
+    "name": "moratuwa",
+    "lat": 6.773,
+    "lon": 79.8816
+  },
+  "mount lavinia": {
+    "name": "mount lavinia",
+    "lat": 6.836,
+    "lon": 79.865
+  },
+  "mulleriyawa": {
+    "name": "mulleriyawa",
+    "lat": 6.932,
+    "lon": 79.925
+  },
+  "nampamunuwa": {
+    "name": "nampamunuwa",
+    "lat": 6.828,
+    "lon": 79.952
+  },
+  "navinna": {
+    "name": "navinna",
+    "lat": 6.858,
+    "lon": 79.912
+  },
+  "nawagamuwa": {
+    "name": "nawagamuwa",
+    "lat": 6.932,
+    "lon": 80.012
+  },
+  "nawala": {
+    "name": "nawala",
+    "lat": 6.8858,
+    "lon": 79.8867
+  },
+  "nedimala": {
+    "name": "nedimala",
+    "lat": 6.842,
+    "lon": 79.878
+  },
+  "neelammahara": {
+    "name": "neelammahara",
+    "lat": 6.838,
+    "lon": 79.912
+  },
+  "niwanthidiya": {
+    "name": "niwanthidiya",
+    "lat": 6.812,
+    "lon": 79.955
+  },
+  "nugegoda": {
+    "name": "nugegoda",
+    "lat": 6.8649,
+    "lon": 79.8997
+  },
+  "oruwala": {
+    "name": "oruwala",
+    "lat": 6.892,
+    "lon": 79.992
+  },
+  "padukka": {
+    "name": "padukka",
+    "lat": 6.8528,
+    "lon": 80.1022
+  },
+  "pagoda": {
+    "name": "pagoda",
+    "lat": 6.882,
+    "lon": 79.895
+  },
+  "pahalawela": {
+    "name": "pahalawela",
+    "lat": 6.885,
+    "lon": 79.918
+  },
+  "palagama": {
+    "name": "palagama",
+    "lat": 6.812,
+    "lon": 79.982
+  },
+  "pamankada": {
+    "name": "pamankada",
+    "lat": 6.872,
+    "lon": 79.868
+  },
+  "pamunuwa": {
+    "name": "pamunuwa",
+    "lat": 6.862,
+    "lon": 79.928
+  },
+  "panagoda": {
+    "name": "panagoda",
+    "lat": 6.852,
+    "lon": 80.028
+  },
+  "pannipitiya": {
+    "name": "pannipitiya",
+    "lat": 6.852,
+    "lon": 79.952
+  },
+  "pathiragoda": {
+    "name": "pathiragoda",
+    "lat": 6.854,
+    "lon": 79.938
+  },
+  "pelenwatta": {
+    "name": "pelenwatta",
+    "lat": 6.838,
+    "lon": 79.972
+  },
+  "pepiliyana": {
+    "name": "pepiliyana",
+    "lat": 6.855,
+    "lon": 79.885
+  },
+  "piliyandala": {
+    "name": "piliyandala",
+    "lat": 6.801,
+    "lon": 79.923
+  },
+  "pinnawala": {
+    "name": "pinnawala",
+    "lat": 6.892,
+    "lon": 80.088
+  },
+  "pitakotte": {
+    "name": "pitakotte",
+    "lat": 6.892,
+    "lon": 79.902
+  },
+  "pitipana": {
+    "name": "pitipana",
+    "lat": 6.838,
+    "lon": 80.022
+  },
+  "pore": {
+    "name": "pore",
+    "lat": 6.885,
+    "lon": 79.985
+  },
+  "pothuarawa": {
+    "name": "pothuarawa",
+    "lat": 6.898,
+    "lon": 79.948
+  },
+  "puwakpitiya": {
+    "name": "puwakpitiya",
+    "lat": 6.938,
+    "lon": 80.185
+  },
+  "rajagiriya": {
+    "name": "rajagiriya",
+    "lat": 6.909,
+    "lon": 79.892
+  },
+  "ranala": {
+    "name": "ranala",
+    "lat": 6.92,
+    "lon": 80.015
+  },
+  "rathmalana": {
+    "name": "rathmalana",
+    "lat": 6.822,
+    "lon": 79.878
+  },
+  "rathmaldeniya": {
+    "name": "rathmaldeniya",
+    "lat": 6.832,
+    "lon": 79.955
+  },
+  "rattanapitiya": {
+    "name": "rattanapitiya",
+    "lat": 6.848,
+    "lon": 79.895
+  },
+  "rawathawatta": {
+    "name": "rawathawatta",
+    "lat": 6.788,
+    "lon": 79.882
+  },
+  "rukmale": {
+    "name": "rukmale",
+    "lat": 6.865,
+    "lon": 79.988
+  },
+  "siddamulla": {
+    "name": "siddamulla",
+    "lat": 6.818,
+    "lon": 79.972
+  },
+  "slave island": {
+    "name": "slave island",
+    "lat": 6.924,
+    "lon": 79.851
+  },
+  "suwarapola": {
+    "name": "suwarapola",
+    "lat": 6.808,
+    "lon": 79.905
+  },
+  "thalahena": {
+    "name": "thalahena",
+    "lat": 6.908,
+    "lon": 79.942
+  },
+  "thalapathpitiya": {
+    "name": "thalapathpitiya",
+    "lat": 6.862,
+    "lon": 79.922
+  },
+  "thalawathugoda": {
+    "name": "thalawathugoda",
+    "lat": 6.878,
+    "lon": 79.938
+  },
+  "thimbirigasyaya": {
+    "name": "thimbirigasyaya",
+    "lat": 6.891,
+    "lon": 79.871
+  },
+  "thumbovila": {
+    "name": "thumbovila",
+    "lat": 6.805,
+    "lon": 79.902
+  },
+  "thunadahena": {
+    "name": "thunadahena",
+    "lat": 6.91,
+    "lon": 80.01
+  },
+  "thunnana": {
+    "name": "thunnana",
+    "lat": 6.898,
+    "lon": 80.115
+  },
+  "udahamulla": {
+    "name": "udahamulla",
+    "lat": 6.861,
+    "lon": 79.915
+  },
+  "uduwana": {
+    "name": "uduwana",
+    "lat": 6.832,
+    "lon": 80.005
+  },
+  "uggalla": {
+    "name": "uggalla",
+    "lat": 6.912,
+    "lon": 80.108
+  },
+  "waga": {
+    "name": "waga",
+    "lat": 6.898,
+    "lon": 80.152
+  },
+  "watareka": {
+    "name": "watareka",
+    "lat": 6.832,
+    "lon": 80.065
+  },
+  "wattegedara": {
+    "name": "wattegedara",
+    "lat": 6.852,
+    "lon": 79.908
+  },
+  "welihinda": {
+    "name": "welihinda",
+    "lat": 6.848,
+    "lon": 80.088
+  },
+  "welivita": {
+    "name": "welivita",
+    "lat": 6.928,
+    "lon": 79.972
+  },
+  "wellampitiya": {
+    "name": "wellampitiya",
+    "lat": 6.942,
+    "lon": 79.892
+  },
+  "wellawatta": {
+    "name": "wellawatta",
+    "lat": 6.8744,
+    "lon": 79.8606
+  },
+  "werahera": {
+    "name": "werahera",
+    "lat": 6.828,
+    "lon": 79.898
+  },
+  "wewala": {
+    "name": "wewala",
+    "lat": 6.818,
+    "lon": 79.918
+  },
+  "wickramasinghepura": {
+    "name": "wickramasinghepura",
+    "lat": 6.892,
+    "lon": 79.928
+  },
+  "wijerama": {
+    "name": "wijerama",
+    "lat": 6.858,
+    "lon": 79.902
+  }
+}

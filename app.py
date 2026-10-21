@@ -121,7 +121,17 @@ with col1:
     st.subheader("📍 1. Interactive GIS Parcel Pinning (Leaflet/OSM)")
     st.caption("Click anywhere on the map to pin the land parcel and compute geodesic distances via Haversine formula.")
     
-    m = folium.Map(location=[6.9022, 79.9172], zoom_start=11)
+    m = folium.Map(
+        location=[6.8770, 79.9904],
+        zoom_start=11,
+        min_zoom=11,
+        max_bounds=True,
+        min_lat=6.712,
+        max_lat=6.985,
+        min_lon=79.818,
+        max_lon=80.226
+    )
+    m.fit_bounds([[6.712, 79.818], [6.985, 80.226]])
     m.add_child(folium.LatLngPopup())
     map_data = st_folium(m, height=380, width=650)
     

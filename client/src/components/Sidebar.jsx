@@ -7,7 +7,8 @@ export default function Sidebar({
   params,
   setParams,
   onOpenHistory,
-  historyCount = 0
+  historyCount = 0,
+  onSuburbChange,
 }) {
   const handleChange = (field, value) => {
     setParams((prev) => ({
@@ -32,7 +33,13 @@ export default function Sidebar({
           id="suburb-select"
           className="form-select"
           value={params.suburb}
-          onChange={(e) => handleChange('suburb', e.target.value)}
+          onChange={(e) => {
+            if (onSuburbChange) {
+              onSuburbChange(e.target.value);
+            } else {
+              handleChange('suburb', e.target.value);
+            }
+          }}
         >
           {suburbs.map((suburb) => (
             <option key={suburb} value={suburb}>
