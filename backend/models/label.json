@@ -1,0 +1,6 @@
+{
+  "0": "drainage overflow(repair)",
+  "1": "open drainage(not overflowing)",
+  "2": "open manhole(not overflowing)",
+  "3": "closed manhole(not overflowing)"
+}

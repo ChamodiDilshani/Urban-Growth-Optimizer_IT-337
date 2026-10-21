@@ -31,7 +31,7 @@ async def detect(
     conf: float = Query(0.25, ge=0.01, le=0.99),
     iou: float = Query(0.5, ge=0.1, le=0.99),
 ):
-    data = await file.read()
+    data = await file.read(MAX_BYTES + 1)
     if len(data) > MAX_BYTES:
         raise HTTPException(413, "Image too large (max 15 MB)")
     try:
