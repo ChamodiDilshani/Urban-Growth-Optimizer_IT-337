@@ -10,6 +10,11 @@ from streamlit_folium import st_folium
 from xgboost import XGBRegressor
 from sklearn.preprocessing import OneHotEncoder, RobustScaler
 from sklearn.compose import ColumnTransformer
+import sklearn.compose._column_transformer
+if not hasattr(sklearn.compose._column_transformer, '_RemainderColsList'):
+    class _RemainderColsList(list):
+        pass
+    sklearn.compose._column_transformer._RemainderColsList = _RemainderColsList
 from fpdf import FPDF
 from datetime import datetime
 
