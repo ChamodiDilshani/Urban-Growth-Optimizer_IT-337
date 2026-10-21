@@ -60,6 +60,35 @@ class DetectorTests(unittest.TestCase):
             [item["label"] for item in result["detections"]], ["drain", "manhole"]
         )
 
+    def test_predict_filters_confidence_and_restores_original_image_coordinates(self):
+        class Session:
+            def run(self, _outputs, _inputs):
+                output = np.zeros((1, 8, 8400), dtype=np.float32)
+                output[0, :4, :2] = np.array(
+                    [[320, 320], [320, 320], [200, 200], [200, 200]],
+                    dtype=np.float32,
+                )
+                output[0, 6, 0] = 0.9
+                output[0, 5, 1] = 0.4
+                return [output]
+
+        self.detector.session = Session()
+        self.detector.input_name = "images"
+        self.detector.names = {1: "drain", 2: "manhole"}
+
+        result = self.detector.predict(
+            Image.new("RGB", (320, 160)), conf=0.5, iou=0.5
+        )
+
+        self.assertEqual(result["width"], 320)
+        self.assertEqual(result["height"], 160)
+        self.assertEqual(len(result["detections"]), 1)
+        detection = result["detections"][0]
+        self.assertEqual(detection["class_id"], 2)
+        self.assertEqual(detection["label"], "manhole")
+        self.assertEqual(detection["confidence"], 0.9)
+        self.assertEqual(detection["box"], [110.0, 30.0, 210.0, 130.0])
+
 
 if __name__ == "__main__":
     unittest.main()
