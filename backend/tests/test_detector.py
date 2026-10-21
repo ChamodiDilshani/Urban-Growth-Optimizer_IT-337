@@ -119,6 +119,22 @@ class DetectorTests(unittest.TestCase):
         self.assertEqual(detection["confidence"], 0.9)
         self.assertEqual(detection["box"], [110.0, 30.0, 210.0, 130.0])
 
+    def test_predict_clips_boxes_to_image_bounds(self):
+        class Session:
+            def run(self, _outputs, _inputs):
+                output = np.zeros((1, 8, 8400), dtype=np.float32)
+                output[0, :4, 0] = [10, 170, 40, 40]
+                output[0, 4, 0] = 0.9
+                return [output]
+
+        self.detector.session = Session()
+        self.detector.input_name = "images"
+        self.detector.names = {0: "drain"}
+
+        result = self.detector.predict(Image.new("RGB", (320, 160)))
+
+        self.assertEqual(result["detections"][0]["box"], [0.0, 0.0, 15.0, 15.0])
+
 
 if __name__ == "__main__":
     unittest.main()
