@@ -37,6 +37,18 @@ class DetectorTests(unittest.TestCase):
 
         self.assertEqual(Detector._nms(boxes, scores, 0.5), [])
 
+    def test_predict_returns_empty_detections_when_no_score_meets_threshold(self):
+        class Session:
+            def run(self, _outputs, _inputs):
+                return [np.zeros((1, 8, 8400), dtype=np.float32)]
+
+        self.detector.session = Session()
+        self.detector.input_name = "images"
+
+        result = self.detector.predict(Image.new("RGB", (320, 160)), conf=0.25)
+
+        self.assertEqual(result, {"width": 320, "height": 160, "detections": []})
+
     def test_predict_keeps_overlapping_detections_from_different_classes(self):
         class Session:
             def run(self, _outputs, _inputs):
