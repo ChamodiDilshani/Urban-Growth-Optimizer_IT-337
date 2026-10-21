@@ -287,7 +287,7 @@ export default function App() {
             isMapSelected={selectionSource === 'map'}
           />
 
-          {/* Column 2: Valuation, Tax Metrics, PDF Download & SHAP */}
+          {/* Column 2: Valuation, Tax Metrics & PDF Statement */}
           <div className="column-panel">
             <MetricsDisplay
               valuation={valuation}
@@ -295,12 +295,15 @@ export default function App() {
               onDownloadPdf={handleDownloadPdf}
               isDownloadingPdf={isDownloadingPdf}
             />
-
-            <ShapExplainer
-              shapImage={valuation?.shap_image}
-              isLoading={isPredicting}
-            />
           </div>
+        </div>
+
+        {/* Section 3: Full-Width Explainable AI (SHAP) Price Justification */}
+        <div className="full-width-shap-section">
+          <ShapExplainer
+            shapImage={valuation?.shap_image}
+            isLoading={isPredicting}
+          />
         </div>
       </main>
 

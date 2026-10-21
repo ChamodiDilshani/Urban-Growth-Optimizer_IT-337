@@ -12,6 +12,7 @@ import shap
 import matplotlib
 matplotlib.use('Agg')  # Non-interactive backend for server
 import matplotlib.pyplot as plt
+import matplotlib.patches as patches
 from xgboost import XGBRegressor
 from sklearn.preprocessing import OneHotEncoder, RobustScaler
 from sklearn.compose import ColumnTransformer
@@ -42,6 +43,244 @@ ROAD_MULTIPLIERS = {
     "20 ft": 1.06,
     "30+ ft": 1.12
 }
+
+FRIENDLY_NAMES = {
+    'Distance from fort': 'Distance to Fort',
+    'Land_size(Perches)': 'Land Size (Perches)',
+    'count_banks_within_2km': 'Banks within 2km',
+    'min_dist_nearest_Pvt_Hospital': 'Dist to Pvt Hospital',
+    'min_dist_govtschools_a': 'Dist to Govt School (A)',
+    'min_dist_govtschools_b': 'Dist to Govt School (B)',
+    'min_dist_semigovtschools': 'Dist to Semi-Govt School',
+    'min_dist_intlschools': 'Dist to Intl School',
+    'min_dist_uni': 'Dist to University',
+    'min_dist_nearest_railway': 'Dist to Railway Station',
+    'min_dist_nearest_bank': 'Dist to Nearest Bank',
+    'min_dist_nearest_FinanceCompany': 'Dist to Finance Co',
+    'count_FinanceCompanies_within_2km': 'Finance Co within 2km',
+    'min_dist_nearest_Govt_Hospital': 'Dist to Govt Hospital',
+    'count_Govt_Hospitals': 'Govt Hospitals within 2km',
+    'count_Pvt_Hospital': 'Pvt Hospitals within 2km',
+    'min_dist_nearest_Pvt_Med_center': 'Dist to Pvt Clinic',
+    'count_Pvt_Med_Centers': 'Pvt Clinics within 2km',
+    'min_dist_nearest_Supermarket': 'Dist to Supermarket',
+    'count_Supermarkets_within2km': 'Supermarkets within 2km',
+    'min_dist_nearest_Fuel_station': 'Dist to Fuel Station',
+    'count_Fuel_Stations_within2km': 'Fuel Stations within 2km',
+    'min_dist_nearest_express': 'Dist to Express Highway',
+}
+
+def get_friendly_name(raw_name: str) -> str:
+    if raw_name in FRIENDLY_NAMES:
+        return FRIENDLY_NAMES[raw_name]
+    if raw_name.startswith('Address_'):
+        sub = raw_name.replace('Address_', '').replace('_', ' ').title()
+        return f"Location = {sub}"
+    if raw_name.startswith('Land_type_'):
+        lt = raw_name.replace('Land_type_', '').replace('_', ' ').title()
+        return f"Zoning = {lt}"
+    return raw_name.replace('_', ' ').title()
+
+def render_publication_waterfall(shap_vals, input_dict: dict, max_display: int = 8, figsize=(6.8, 4.4), dpi: int = 180) -> str:
+    """Renders a clean, high-fidelity SHAP waterfall plot matching standard publication styling."""
+    base_val = float(shap_vals.base_values[0])
+    values = shap_vals.values[0]
+    raw_feature_names = list(shap_vals.feature_names)
+    raw_data = shap_vals.data[0]
+
+    # Sort indices by absolute SHAP contribution
+    sorted_idx = sorted(range(len(values)), key=lambda i: abs(values[i]), reverse=True)
+    top_idx = sorted_idx[:max_display]
+    other_idx = sorted_idx[max_display:]
+
+    display_items = []
+    if other_idx:
+        other_sum = sum(values[i] for i in other_idx)
+        display_items.append({
+            'name': f"{len(other_idx)} other features",
+            'val_str': "",
+            'delta': other_sum
+        })
+
+    for i in reversed(top_idx):
+        raw_name = raw_feature_names[i]
+        friendly_name = get_friendly_name(raw_name)
+
+        orig_val = input_dict.get(raw_name, None)
+        if orig_val is not None:
+            if 'dist' in raw_name.lower():
+                val_str = f"{float(orig_val):.1f}km"
+            elif 'size' in raw_name.lower():
+                val_str = f"{float(orig_val):.0f}p"
+            elif isinstance(orig_val, (int, float)):
+                if abs(float(orig_val) - round(float(orig_val))) < 0.001:
+                    val_str = str(int(round(float(orig_val))))
+                else:
+                    val_str = f"{float(orig_val):.2g}"
+            else:
+                val_str = str(orig_val)
+        elif raw_name.startswith('Address_') or raw_name.startswith('Land_type_'):
+            val_str = "1" if raw_data[i] > 0.5 else "0"
+        else:
+            scale_val = raw_data[i]
+            if abs(scale_val - round(scale_val)) < 0.001:
+                val_str = str(int(round(scale_val)))
+            else:
+                val_str = f"{scale_val:.2g}"
+
+        display_items.append({
+            'name': friendly_name,
+            'val_str': val_str,
+            'delta': float(values[i])
+        })
+
+    # Plot
+    plt.rcParams['font.family'] = 'sans-serif'
+    fig, ax = plt.subplots(figsize=figsize, dpi=dpi, facecolor='white')
+
+    COLOR_POS = "#ff0051"  # Vibrant SHAP Red / Pink
+    COLOR_NEG = "#008bfb"  # Vibrant SHAP Blue
+    COLOR_TEXT = "#1e293b"
+    COLOR_MUTED = "#64748b"
+    COLOR_GRID = "#f8fafc"
+    COLOR_LINE = "#94a3b8"
+
+    n = len(display_items)
+    y_positions = np.arange(n)
+    bar_height = 0.55
+
+    cum_x = [base_val]
+    for item in display_items:
+        cum_x.append(cum_x[-1] + item['delta'])
+
+    final_val = cum_x[-1]
+    all_x = cum_x.copy()
+    min_x, max_x = min(all_x), max(all_x)
+    x_range = max(1.0, max_x - min_x)
+    arrow_w = x_range * 0.024
+
+    # Subtle horizontal guidelines
+    for y in y_positions:
+        ax.axhline(y, color=COLOR_GRID, linestyle=':', linewidth=1.1, zorder=0)
+
+    # Vertical reference lines
+    ax.axvline(base_val, color=COLOR_LINE, linestyle="--", linewidth=1.1, zorder=1)
+    ax.axvline(final_val, color=COLOR_LINE, linestyle="--", linewidth=1.1, zorder=1)
+
+    # Draw bars
+    for i in range(n):
+        y = y_positions[i]
+        x_start = cum_x[i]
+        x_end = cum_x[i+1]
+        delta = display_items[i]['delta']
+        is_pos = delta >= 0
+        color = COLOR_POS if is_pos else COLOR_NEG
+
+        w = abs(delta)
+        y_bot = y - bar_height / 2
+        y_top = y + bar_height / 2
+
+        if is_pos:
+            aw = min(arrow_w, w * 0.42)
+            pts = [
+                [x_start, y_bot],
+                [x_end - aw, y_bot],
+                [x_end, y],
+                [x_end - aw, y_top],
+                [x_start, y_top]
+            ]
+        else:
+            aw = min(arrow_w, w * 0.42)
+            pts = [
+                [x_start, y_bot],
+                [x_end + aw, y_bot],
+                [x_end, y],
+                [x_end + aw, y_top],
+                [x_start, y_top]
+            ]
+
+        poly = patches.Polygon(pts, closed=True, facecolor=color, edgecolor='none', zorder=3)
+        ax.add_patch(poly)
+
+        # Delta label
+        sign = "+" if is_pos else "-"
+        abs_d = abs(delta)
+        if abs_d >= 1e6:
+            val_text = f"{sign}{abs_d/1e6:.2f}M"
+        elif abs_d >= 1e3:
+            val_text = f"{sign}{abs_d/1e3:.1f}k"
+        else:
+            val_text = f"{sign}{abs_d:,.0f}"
+
+        bar_frac = w / x_range
+        if bar_frac > 0.17:
+            text_x = (x_start + x_end) / 2
+            ax.text(text_x, y, val_text, color="white", fontsize=8.6, fontweight="bold",
+                    ha="center", va="center", zorder=4)
+        else:
+            if is_pos:
+                text_x = x_end + x_range * 0.016
+                ha = "left"
+            else:
+                text_x = x_end - x_range * 0.016
+                ha = "right"
+            ax.text(text_x, y, val_text, color=color, fontsize=8.6, fontweight="bold",
+                    ha=ha, va="center", zorder=4)
+
+    # Y-axis labels
+    ax.set_yticks(y_positions)
+    y_labels = []
+    for item in display_items:
+        if item['val_str']:
+            y_labels.append(f"{item['val_str']} = {item['name']}")
+        else:
+            y_labels.append(item['name'])
+
+    ax.set_yticklabels(y_labels, fontsize=8.8, color=COLOR_TEXT)
+    ax.tick_params(axis='y', length=0, pad=10)
+
+    # X axis padding & limits
+    pad_left = x_range * 0.14
+    pad_right = x_range * 0.14
+    ax.set_xlim(min_x - pad_left, max_x + pad_right)
+    ax.set_ylim(-0.95, n + 0.35)
+
+    ax.spines['top'].set_visible(False)
+    ax.spines['right'].set_visible(False)
+    ax.spines['left'].set_visible(False)
+    ax.spines['bottom'].set_color('#1e293b')
+    ax.spines['bottom'].set_linewidth(1.1)
+
+    ticks = ax.get_xticks()
+    new_ticks = [t for t in ticks if (min_x - pad_left * 0.75) <= t <= (max_x + pad_right * 0.75)]
+    if new_ticks:
+        ax.set_xticks(new_ticks)
+        tick_labels = []
+        for t in new_ticks:
+            if abs(t) >= 1e6:
+                tick_labels.append(f"{t/1e6:.2f}")
+            elif abs(t) >= 1e3:
+                tick_labels.append(f"{t/1e3:.0f}k")
+            else:
+                tick_labels.append(f"{t:,.0f}")
+        ax.set_xticklabels(tick_labels, fontsize=8.5, color='#334155')
+    ax.tick_params(axis='x', colors='#334155', length=4, pad=4)
+
+    # Bottom E[f(X)] text
+    base_str = f"{base_val/1e6:.3f}" if abs(base_val) >= 1e6 else f"{base_val:,.0f}"
+    ax.text(base_val, -1.55, f"$E[f(X)] = {base_str}$", color=COLOR_MUTED, fontsize=9.2,
+            ha="center", va="top", fontweight="bold")
+
+    # Top f(x) text
+    final_str = f"{final_val/1e6:.3f}" if abs(final_val) >= 1e6 else f"{final_val:,.0f}"
+    ax.text(final_val, n + 0.12, f"$f(x) = {final_str}$", color=COLOR_TEXT, fontsize=9.5,
+            ha="center", va="bottom", fontweight="bold")
+
+    plt.tight_layout()
+    buf = io.BytesIO()
+    plt.savefig(buf, format='png', bbox_inches='tight', dpi=dpi, facecolor='white')
+    plt.close('all')
+    return "data:image/png;base64," + base64.b64encode(buf.getvalue()).decode()
 
 class ModelEngine:
     def __init__(self):
@@ -140,20 +379,19 @@ class ModelEngine:
         X_trans_df = pd.DataFrame(X_transformed, columns=feature_names)
         shap_vals = self.explainer(X_trans_df)
 
-        # Thread-safe SHAP waterfall plot generation
+        # Thread-safe publication-quality SHAP waterfall plot generation
         with plot_lock:
-            fig, ax = plt.subplots(figsize=(7, 3.8))
             try:
-                shap.plots.waterfall(shap_vals[0], max_display=8, show=False)
-                buf = io.BytesIO()
-                plt.tight_layout()
-                plt.savefig(buf, format='png', bbox_inches='tight', dpi=140)
-                shap_b64 = "data:image/png;base64," + base64.b64encode(buf.getvalue()).decode()
+                shap_b64 = render_publication_waterfall(
+                    shap_vals=shap_vals,
+                    input_dict=input_dict,
+                    max_display=8,
+                    figsize=(6.8, 4.4),
+                    dpi=180
+                )
             except Exception as plot_err:
                 print("SHAP plot warning:", plot_err)
                 shap_b64 = None
-            finally:
-                plt.close('all')
 
         # Generate Official Assessment Tax PDF statement in Base64 (Bypasses IDM network interception)
         from pdf_generator import create_pdf_bytes
