@@ -108,6 +108,17 @@ class DetectEndpointTests(unittest.IsolatedAsyncioTestCase):
 
         self.assertEqual(raised.exception.status_code, 400)
 
+    async def test_detect_rejects_empty_upload(self):
+        from fastapi import UploadFile
+
+        upload = UploadFile(filename="empty.png", file=io.BytesIO(b""))
+
+        with self.assertRaises(api.HTTPException) as raised:
+            await api.detect(upload, conf=0.25, iou=0.5)
+
+        self.assertEqual(raised.exception.status_code, 400)
+        self.assertEqual(raised.exception.detail, "File is not a valid image")
+
     async def test_detect_converts_image_decode_oserror_to_bad_request(self):
         from fastapi import UploadFile
 
