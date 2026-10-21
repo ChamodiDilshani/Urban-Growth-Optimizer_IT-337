@@ -37,6 +37,29 @@ class DetectorTests(unittest.TestCase):
 
         self.assertEqual(Detector._nms(boxes, scores, 0.5), [])
 
+    def test_predict_keeps_overlapping_detections_from_different_classes(self):
+        class Session:
+            def run(self, _outputs, _inputs):
+                output = np.zeros((1, 8, 8400), dtype=np.float32)
+                output[0, :4, :3] = np.array(
+                    [[320, 320, 320], [320, 320, 320], [100, 100, 100], [100, 100, 100]],
+                    dtype=np.float32,
+                )
+                output[0, 4, :2] = [0.9, 0.7]
+                output[0, 5, 1] = 0.8
+                return [output]
+
+        self.detector.session = Session()
+        self.detector.input_name = "images"
+        self.detector.names = {0: "drain", 1: "manhole"}
+
+        result = self.detector.predict(Image.new("RGB", (IMGSZ, IMGSZ)))
+
+        self.assertEqual([item["class_id"] for item in result["detections"]], [0, 1])
+        self.assertEqual(
+            [item["label"] for item in result["detections"]], ["drain", "manhole"]
+        )
+
 
 if __name__ == "__main__":
     unittest.main()
