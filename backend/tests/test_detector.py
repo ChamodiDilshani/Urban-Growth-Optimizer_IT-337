@@ -30,6 +30,15 @@ class DetectorTests(unittest.TestCase):
         self.assertTrue(np.isfinite(tensor).all())
         self.assertEqual((scale, pad_x, pad_y), (20.0, 0, 0))
 
+    def test_preprocess_letterboxes_tall_image_with_horizontal_padding(self):
+        image = Image.new("RGB", (160, 320), (0, 0, 255))
+
+        tensor, scale, pad_x, pad_y = self.detector._preprocess(image)
+
+        self.assertEqual((scale, pad_x, pad_y), (2.0, 160, 0))
+        np.testing.assert_allclose(tensor[0, :, 0, 0], 114 / 255)
+        np.testing.assert_allclose(tensor[0, :, 320, 320], (0.0, 0.0, 1.0))
+
     def test_nms_keeps_highest_scoring_overlapping_box_and_separate_box(self):
         boxes = np.array(
             [[0, 0, 10, 10], [1, 1, 9, 9], [20, 20, 30, 30]], dtype=np.float32
