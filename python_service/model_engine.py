@@ -1,8 +1,11 @@
 import os
+import sys
 import math
 import io
 import base64
 import threading
+import warnings
+warnings.filterwarnings("ignore")
 import pandas as pd
 
 plot_lock = threading.Lock()

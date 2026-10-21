@@ -1,3 +1,9 @@
+import os
+import sys
+import subprocess
+import warnings
+warnings.filterwarnings("ignore")
+
 from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import Response
@@ -19,7 +25,7 @@ app.add_middleware(
 )
 
 class PredictRequest(BaseModel):
-    suburb: str = Field(..., example="athurugiriya")
+    suburb: str = Field(..., json_schema_extra={"example": "athurugiriya"})
     land_size: float = Field(12.0, ge=1.0, le=200.0)
     land_type: str = Field("Residential")
     road_width: str = Field("15 ft")
@@ -75,5 +81,14 @@ def generate_pdf(req: PdfRequest):
     except Exception as e:
         raise HTTPException(status_code=500, detail=f"PDF generation error: {str(e)}")
 
+def free_port(port: int = 5001):
+    """Automatically terminate any leftover process occupying port 5001 on Windows."""
+    try:
+        cmd = f"powershell -Command \"Stop-Process -Id (Get-NetTCPConnection -LocalPort {port} -ErrorAction SilentlyContinue).OwningProcess -Force -ErrorAction SilentlyContinue\""
+        subprocess.run(cmd, shell=True, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+    except Exception:
+        pass
+
 if __name__ == "__main__":
+    free_port(5001)
     uvicorn.run("main:app", host="127.0.0.1", port=5001, reload=False)
