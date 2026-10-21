@@ -1,19 +1,8 @@
 import React, { useEffect, useRef, useState, useCallback, useMemo } from 'react';
 import L from 'leaflet';
 import colomboBoundary from '../data/colomboBoundary.json';
-
-// Ray-casting point-in-polygon algorithm
-function isPointInDistrict(lat, lon, ring) {
-  let inside = false;
-  for (let i = 0, j = ring.length - 1; i < ring.length; j = i++) {
-    const xi = ring[i][0], yi = ring[i][1]; // lat, lon
-    const xj = ring[j][0], yj = ring[j][1];
-    const intersect = ((yi > lon) !== (yj > lon)) &&
-      (lat < (xj - xi) * (lon - yi) / (yj - yi) + xi);
-    if (intersect) inside = !inside;
-  }
-  return inside;
-}
+import colomboSuburbsCoords from '../data/colomboSuburbsCoords.json';
+import { isPointInDistrict, findNearestColomboSuburb } from '../utils/geoUtils';
 
 export default function MapParcelPin({
   lat = 6.8770,
@@ -22,6 +11,8 @@ export default function MapParcelPin({
   distFort = 14.89,
   isFloodRisk = false,
   suburb = '',
+  suburbs = [],
+  isMapSelected = false,
 }) {
   const mapContainerRef = useRef(null);
   const mapInstanceRef = useRef(null);
@@ -51,6 +42,23 @@ export default function MapParcelPin({
       mapInstanceRef.current.setView([lat, lon], 14, { animate: true });
     }
   }, [lat, lon]);
+
+  // Format popup HTML for marker
+  const createPopupContent = useCallback((pLat, pLon, pArea, fromMap) => {
+    const areaName = pArea ? (pArea.charAt(0).toUpperCase() + pArea.slice(1)) : 'Colombo';
+    return `
+      <div style="font-size:0.88rem; line-height:1.45; min-width: 175px;">
+        <strong style="color:#0f172a; display:block; margin-bottom:2px;">📍 Pinned Parcel Location</strong>
+        <div style="color:#1d4ed8; font-weight:700; margin-bottom:2px;">
+          Area: ${areaName}
+        </div>
+        <div style="color:#64748b; font-size:0.8rem;">
+          Lat: ${pLat.toFixed(4)}, Lon: ${pLon.toFixed(4)}
+        </div>
+        ${fromMap ? '<div style="color:#059669; font-size:0.75rem; font-weight:600; margin-top:3px;">✓ Selected on map</div>' : ''}
+      </div>
+    `;
+  }, []);
 
   useEffect(() => {
     if (!mapContainerRef.current) return;
@@ -130,7 +138,7 @@ export default function MapParcelPin({
       });
 
       const marker = L.marker([lat, lon], { icon: pinIcon }).addTo(map);
-      marker.bindPopup(`<b>Pinned Parcel Location</b><br/>Lat: ${lat.toFixed(4)}, Lon: ${lon.toFixed(4)}`).openPopup();
+      marker.bindPopup(createPopupContent(lat, lon, suburb, isMapSelected)).openPopup();
 
       // Fit map view perfectly to Colombo District bounds
       map.fitBounds(colomboBounds, { padding: [12, 12] });
@@ -157,10 +165,16 @@ export default function MapParcelPin({
         }
 
         setWarning(null);
+
+        // Detect the nearest Colombo District suburb for the clicked coordinates
+        const nearest = findNearestColomboSuburb(clickLat, clickLon, colomboSuburbsCoords, suburbs);
+        const detectedSuburb = nearest?.suburb || suburb;
+
         marker.setLatLng([clickLat, clickLon]);
-        marker.setPopupContent(`<b>Pinned Parcel Location</b><br/>Lat: ${clickLat.toFixed(4)}, Lon: ${clickLon.toFixed(4)}`).openPopup();
+        marker.setPopupContent(createPopupContent(clickLat, clickLon, detectedSuburb, true)).openPopup();
+
         if (onCoordsChange) {
-          onCoordsChange(clickLat, clickLon);
+          onCoordsChange(clickLat, clickLon, detectedSuburb);
         }
       });
 
@@ -175,20 +189,20 @@ export default function MapParcelPin({
         mapInstanceRef.current = null;
       }
     };
-  }, [colomboBounds, colomboRing]);
+  }, [colomboBounds, colomboRing, createPopupContent]);
 
-  // Update marker position & pan smoothly if coordinates change externally
+  // Update marker position & popup when coordinates or suburb change
   useEffect(() => {
     if (markerRef.current && mapInstanceRef.current) {
       markerRef.current.setLatLng([lat, lon]);
-      markerRef.current.setPopupContent(`<b>Pinned Parcel Location</b><br/>Lat: ${lat.toFixed(4)}, Lon: ${lon.toFixed(4)}`);
+      markerRef.current.setPopupContent(createPopupContent(lat, lon, suburb, isMapSelected));
 
       // If marker is outside current viewport, pan to it smoothly
       if (!mapInstanceRef.current.getBounds().contains([lat, lon])) {
         mapInstanceRef.current.panTo([lat, lon], { animate: true });
       }
     }
-  }, [lat, lon]);
+  }, [lat, lon, suburb, isMapSelected, createPopupContent]);
 
   return (
     <div className="column-panel">
@@ -265,7 +279,28 @@ export default function MapParcelPin({
 
       {/* Info Alert Box */}
       <div className="st-alert st-alert-info">
-        <strong>Pinned Coordinates:</strong> Lat <code>{lat.toFixed(4)}</code>, Lon <code>{lon.toFixed(4)}</code> | <strong>Distance to Fort:</strong> <code>{distFort} km</code>
+        <strong>Selected Area:</strong>{' '}
+        <span style={{ textTransform: 'capitalize', fontWeight: 700, color: '#1e40af' }}>
+          {suburb}
+        </span>
+        {isMapSelected && (
+          <span
+            style={{
+              fontSize: '0.74rem',
+              backgroundColor: '#dbeafe',
+              color: '#1d4ed8',
+              fontWeight: 600,
+              padding: '1px 6px',
+              borderRadius: '4px',
+              marginLeft: '6px',
+              marginRight: '6px',
+            }}
+          >
+            Selected on map
+          </span>
+        )}{' '}
+        | <strong>Coordinates:</strong> Lat <code>{lat.toFixed(4)}</code>, Lon{' '}
+        <code>{lon.toFixed(4)}</code> | <strong>Distance to Fort:</strong> <code>{distFort} km</code>
       </div>
 
       {/* Flood Hazard Alert Box */}

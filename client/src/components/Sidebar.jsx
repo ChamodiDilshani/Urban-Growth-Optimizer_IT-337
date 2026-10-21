@@ -9,6 +9,7 @@ export default function Sidebar({
   onOpenHistory,
   historyCount = 0,
   onSuburbChange,
+  isMapSelected = false,
 }) {
   const handleChange = (field, value) => {
     setParams((prev) => ({
@@ -26,9 +27,30 @@ export default function Sidebar({
 
       {/* Suburb Selector */}
       <div className="form-group">
-        <label className="form-label" htmlFor="suburb-select">
-          Select Suburb / Area (Colombo District)
-        </label>
+        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '0.35rem' }}>
+          <label className="form-label" htmlFor="suburb-select" style={{ marginBottom: 0 }}>
+            Select Suburb / Area (Colombo District)
+          </label>
+          {isMapSelected && (
+            <span
+              style={{
+                backgroundColor: '#dbeafe',
+                color: '#1d4ed8',
+                fontSize: '0.72rem',
+                fontWeight: 700,
+                padding: '2px 8px',
+                borderRadius: '12px',
+                border: '1px solid #bfdbfe',
+                display: 'inline-flex',
+                alignItems: 'center',
+                gap: '0.25rem',
+              }}
+            >
+              <span>📍</span> Selected on map
+            </span>
+          )}
+        </div>
+
         <select
           id="suburb-select"
           className="form-select"
@@ -47,6 +69,44 @@ export default function Sidebar({
             </option>
           ))}
         </select>
+
+        {/* Dynamic status indicator under the selector */}
+        {isMapSelected ? (
+          <div
+            style={{
+              marginTop: '0.45rem',
+              padding: '6px 10px',
+              backgroundColor: '#eff6ff',
+              border: '1px solid #bfdbfe',
+              borderRadius: '6px',
+              fontSize: '0.8rem',
+              color: '#1e40af',
+              display: 'flex',
+              alignItems: 'center',
+              gap: '0.4rem',
+              fontWeight: 500,
+              lineHeight: 1.35,
+            }}
+          >
+            <span style={{ fontSize: '0.95rem' }}>📍</span>
+            <span>
+              <strong style={{ textTransform: 'capitalize' }}>{params.suburb}</strong> has been <strong>Selected on map</strong>
+            </span>
+          </div>
+        ) : (
+          <div
+            style={{
+              marginTop: '0.3rem',
+              fontSize: '0.75rem',
+              color: 'var(--text-muted)',
+              display: 'flex',
+              alignItems: 'center',
+              gap: '0.3rem',
+            }}
+          >
+            <span>📋 Selected from dropdown list</span>
+          </div>
+        )}
       </div>
 
       {/* Land Extent */}

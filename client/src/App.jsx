@@ -7,6 +7,7 @@ import ShapExplainer from './components/ShapExplainer';
 import HistoryModal from './components/HistoryModal';
 import { api } from './services/api';
 import colomboSuburbsCoords from './data/colomboSuburbsCoords.json';
+import { findNearestColomboSuburb } from './utils/geoUtils';
 
 export default function App() {
   // Metadata from backend
@@ -41,10 +42,14 @@ export default function App() {
   const [historyList, setHistoryList] = useState([]);
   const [historySource, setHistorySource] = useState('memory');
 
+  // Selection mode: 'dropdown' | 'map'
+  const [selectionSource, setSelectionSource] = useState('dropdown');
+
   const debounceTimerRef = useRef(null);
 
   // Suburb change handler (auto-centers map to suburb coordinates within Colombo district)
   const handleSuburbChange = useCallback((newSuburb) => {
+    setSelectionSource('dropdown');
     const key = newSuburb.toLowerCase().trim();
     const coord = colomboSuburbsCoords[key];
     setParams((prev) => ({
@@ -143,14 +148,22 @@ export default function App() {
     };
   }, [params, isLoadingMetadata, executePrediction]);
 
-  // Coordinate change callback from map pin
-  const handleCoordsChange = (newLat, newLon) => {
+  // Coordinate change callback from map pin: detects nearest Colombo suburb & synchronizes sidebar
+  const handleCoordsChange = useCallback((newLat, newLon, detectedSuburb) => {
+    let activeSuburb = detectedSuburb;
+    if (!activeSuburb) {
+      const nearest = findNearestColomboSuburb(newLat, newLon, colomboSuburbsCoords, metadata.suburbs);
+      activeSuburb = nearest?.suburb || params.suburb;
+    }
+
+    setSelectionSource('map');
     setParams((prev) => ({
       ...prev,
       lat: newLat,
       lon: newLon,
+      suburb: activeSuburb,
     }));
-  };
+  }, [metadata.suburbs, params.suburb]);
 
   // 4. Download PDF (In-Memory Base64 download to completely bypass IDM interception)
   const handleDownloadPdf = async () => {
@@ -202,14 +215,15 @@ export default function App() {
 
   // Restore history record
   const handleRestoreHistory = (item) => {
+    setSelectionSource('dropdown');
     setParams({
       suburb: item.suburb,
       land_size: item.landSize,
       land_type: item.landType,
       road_width: item.roadWidth,
       target_year: item.targetYear,
-      lat: item.coordinates?.lat || 6.9022,
-      lon: item.coordinates?.lon || 79.9172,
+      lat: item.coordinates?.lat || 6.8770,
+      lon: item.coordinates?.lon || 79.9904,
     });
     setIsHistoryOpen(false);
   };
@@ -246,6 +260,7 @@ export default function App() {
         onOpenHistory={() => setIsHistoryOpen(true)}
         historyCount={historyList.length}
         onSuburbChange={handleSuburbChange}
+        isMapSelected={selectionSource === 'map'}
       />
 
       {/* Main Canvas Area */}
@@ -268,6 +283,8 @@ export default function App() {
             distFort={valuation?.dist_fort ?? 14.89}
             isFloodRisk={valuation?.is_flood_risk ?? false}
             suburb={params.suburb}
+            suburbs={metadata.suburbs}
+            isMapSelected={selectionSource === 'map'}
           />
 
           {/* Column 2: Valuation, Tax Metrics, PDF Download & SHAP */}
