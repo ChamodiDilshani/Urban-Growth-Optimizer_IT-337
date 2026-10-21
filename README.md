@@ -36,3 +36,11 @@ uvicorn app.main:app --app-dir backend --reload
 - `POST /api/detect` accepts an image as multipart form data in the `file` field.
   Optional `conf` and `iou` query parameters configure confidence and
   intersection-over-union thresholds.
+
+### Tests
+
+From the repository root, run the backend unit tests with:
+
+```powershell
+python -m unittest discover -s backend\tests -v
+```
