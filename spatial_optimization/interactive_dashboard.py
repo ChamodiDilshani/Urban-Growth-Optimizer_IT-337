@@ -90,7 +90,7 @@ INFRASTRUCTURE_PRESETS = {
         "description": "Safe road access, high transit connectivity, balanced demographic catchment",
     },
     "national_school": {
-        "label": "National School / Central College (ජාතික පාසල / 1AB)",
+        "label": "National School / Central College (Type 1AB)",
         "emoji": "⭐",
         "criteria": CRITERIA_8,
         "matrix": [
@@ -106,7 +106,7 @@ INFRASTRUCTURE_PRESETS = {
         "description": "District-wide catchment (10km), priority on major transport corridors, avoids nearby National Schools, large campus extent",
     },
     "primary_school": {
-        "label": "Primary School (ප්‍රාථමික පාසල / Gr 1-5)",
+        "label": "Primary School (Grade 1-5)",
         "emoji": "🧒",
         "criteria": CRITERIA_8,
         "matrix": [
@@ -122,7 +122,7 @@ INFRASTRUCTURE_PRESETS = {
         "description": "Neighborhood catchment (1.5-2.5km), high priority on slope safety & residential density, avoids fast highway corridors",
     },
     "secondary_school": {
-        "label": "Provincial Secondary (පළාත් ද්විතීයික / 1C)",
+        "label": "Provincial Secondary School (Type 1C)",
         "emoji": "📚",
         "criteria": CRITERIA_8,
         "matrix": [
@@ -138,7 +138,7 @@ INFRASTRUCTURE_PRESETS = {
         "description": "Regional feeder catchment (4-6km), balanced transport access and residential coverage, standard 200m track",
     },
     "girls_school": {
-        "label": "Girls' High School (බාලිකා විද්‍යාලය)",
+        "label": "Girls' High School",
         "emoji": "🌸",
         "criteria": CRITERIA_8,
         "matrix": [
@@ -154,7 +154,7 @@ INFRASTRUCTURE_PRESETS = {
         "description": "Dedicated female demographic cohort, safe access corridors, secure campus boundary, direct transit links",
     },
     "boys_school": {
-        "label": "Boys' College (බාලක විද්‍යාලය)",
+        "label": "Boys' College",
         "emoji": "🦁",
         "criteria": CRITERIA_8,
         "matrix": [
@@ -222,32 +222,32 @@ INFRASTRUCTURE_PRESETS = {
 # Regional presets within Full Matale District
 REGION_PRESETS = {
     "all": {
-        "name": "Full Matale District (සමස්ත දිස්ත්‍රික්කය)",
+        "name": "Full Matale District",
         "bounds": [0, 200, 0, 200],  # [min_row, max_row, min_col, max_col]
         "desc": "Entire Matale District search space (40,000 locations)"
     },
     "dambulla": {
-        "name": "Dambulla & Sigiriya / North (දඹුල්ල සහ සීගිරිය)",
+        "name": "Dambulla & Sigiriya (North)",
         "bounds": [10, 75, 40, 140],
         "desc": "Northern economic corridor, cultural triangle & tourism belt"
     },
     "galewela": {
-        "name": "Galewela / Western Zone (ගලේවෙල සහ බටහිර)",
+        "name": "Galewela (Western Zone)",
         "bounds": [55, 115, 10, 75],
         "desc": "Flat agricultural terrain, developing rural population"
     },
     "naula": {
-        "name": "Naula & Central Zone (නාවුල සහ මධ්‍යම කලාපය)",
+        "name": "Naula & Central Zone",
         "bounds": [80, 135, 45, 115],
         "desc": "Central connectivity corridor linking North and South"
     },
     "rattota": {
-        "name": "Rattota & Knuckles Belt (රත්තොට සහ නකල්ස්)",
+        "name": "Rattota & Knuckles Belt",
         "bounds": [120, 180, 65, 190],
         "desc": "Hilly terrain, environmentally sensitive buffer areas"
     },
     "matale_urban": {
-        "name": "Matale Town & Urban South (මාතලේ නගරය සහ දකුණ)",
+        "name": "Matale Town & Urban South",
         "bounds": [140, 198, 30, 105],
         "desc": "High population density, commercial hubs, high school demand"
     },
@@ -1002,10 +1002,10 @@ def generate_convergence(ga_history, pso_history, infra_type, zone_label) -> str
 def build_main_page() -> str:
     """Build modern HTML UI with Google/Leaflet Map integration."""
     PRIMARY_INFRA = [
-        ("school", "School (පාසල)", "🏫"),
-        ("hospital", "Hospital (රෝහල)", "🏥"),
-        ("transport_hub", "Transport Hub (නගර මධ්‍යස්ථානය)", "🚌"),
-        ("market", "Market / Commercial (වෙළඳ සංකීර්ණය)", "🏪"),
+        ("school", "School", "🏫"),
+        ("hospital", "Hospital", "🏥"),
+        ("transport_hub", "Transport Hub", "🚌"),
+        ("market", "Market / Commercial", "🏪"),
     ]
     infra_buttons_html = ""
     for key, label, emoji in PRIMARY_INFRA:
@@ -1732,30 +1732,30 @@ def build_main_page() -> str:
             <!-- School Subtypes Panel -->
             <div id="school-subtypes" class="school-subtypes-container">
                 <div class="subtype-header">
-                    <span>🎓 School Classification (පාසල් වර්ගය තෝරන්න):</span>
+                    <span>🎓 School Classification:</span>
                 </div>
                 <div class="subtype-pills">
                     <button class="subtype-pill active" onclick="selectSchoolSubtype('national_school')" id="sub-national_school">
-                        ⭐ National School / Central College (1AB / ජාතික පාසල)
+                        ⭐ National School / Central College (Type 1AB)
                     </button>
                     <button class="subtype-pill" onclick="selectSchoolSubtype('primary_school')" id="sub-primary_school">
-                        🧒 Primary School (Gr 1-5 / ප්‍රාථමික පාසල)
+                        🧒 Primary School (Grade 1-5)
                     </button>
                     <button class="subtype-pill" onclick="selectSchoolSubtype('secondary_school')" id="sub-secondary_school">
-                        📚 Provincial Secondary (1C / පළාත් ද්විතීයික)
+                        📚 Provincial Secondary School (Type 1C)
                     </button>
                     <button class="subtype-pill" onclick="selectSchoolSubtype('girls_school')" id="sub-girls_school">
-                        🌸 Girls' High School (බාලිකා විද්‍යාලය)
+                        🌸 Girls' High School
                     </button>
                     <button class="subtype-pill" onclick="selectSchoolSubtype('boys_school')" id="sub-boys_school">
-                        🦁 Boys' College (බාලක විද්‍යාලය)
+                        🦁 Boys' College
                     </button>
                 </div>
             </div>
         </div>
         
         <div class="panel-card">
-            <h2><span>2.</span> Select Area / Squad (කලාපය තෝරන්න)</h2>
+            <h2><span>2.</span> Select Geographic Sub-Zone</h2>
             <div class="subtitle">Select administrative zone OR drag custom square on the map below</div>
             
             <div class="zone-presets">
@@ -1785,7 +1785,7 @@ def build_main_page() -> str:
             </div>
             
             <button class="run-btn" onclick="executeSearch()">
-                ⚡ Find Optimal Location in Selected Area (සොයන්න)
+                ⚡ Find Optimal Location in Selected Area
             </button>
         </div>
     </div>
@@ -1807,7 +1807,7 @@ def build_main_page() -> str:
                         🛰️ Esri Satellite
                     </button>
                     <button class="view-tab" onclick="switchMapView('3d')" id="tab-3d">
-                        🏔️ 3D WebGL Terrain (3D කඳුකරය)
+                        🏔️ 3D WebGL Terrain View
                     </button>
                 </div>
                 <span style="background:rgba(56,189,248,0.12); border:1px solid rgba(56,189,248,0.35); color:#38bdf8; font-size:0.78rem; font-weight:600; padding:5px 12px; border-radius:20px; display:inline-flex; align-items:center; gap:6px;">
@@ -1886,7 +1886,7 @@ def build_main_page() -> str:
             <!-- Direct Google Maps link -->
             <div style="margin-top: 14px;">
                 <a id="gmaps-btn" href="#" target="_blank" class="gmaps-link-btn">
-                    🗺️ Open Location in Google Maps (Google Maps හි බලන්න) ↗
+                    🗺️ Open Location in Google Maps
                 </a>
             </div>
         </div>
@@ -1896,7 +1896,7 @@ def build_main_page() -> str:
         <!-- Building Specs Prediction Section -->
         <div class="building-specs-section">
             <div class="specs-header">
-                <h2>🏗️ AI Predicted Building Specifications &amp; Sizing (ගොඩනැගිලි සැලසුම් සහ පිරිවිතර)</h2>
+                <h2>🏗️ AI Predicted Building Specifications &amp; Sizing</h2>
                 <span class="specs-tag">Micro-Level Architectural &amp; Capacity AI</span>
             </div>
             <div class="specs-grid" id="specs-grid">

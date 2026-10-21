@@ -106,7 +106,7 @@ def process_utilities():
         for _, row in tr_gdf.iterrows():
             fc = row.get("fclass")
             if fc == "fuel":
-                name = row.get("name") or "Fuel Station (පෙට්‍රල් ෂෙඩ්)"
+                name = row.get("name") or "Fuel Station"
                 utilities.append({
                     "id": f"fuel_{len(utilities)}",
                     "type": "fuel",
