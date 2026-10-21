@@ -77,5 +77,12 @@ class DetectEndpointTests(unittest.IsolatedAsyncioTestCase):
         self.assertEqual(raised.exception.status_code, 400)
 
 
+class HealthEndpointTests(unittest.TestCase):
+    def test_health_reports_status_and_detector_classes(self):
+        result = api.health()
+
+        self.assertEqual(result, {"status": "ok", "classes": StubDetector.names})
+
+
 if __name__ == "__main__":
     unittest.main()
