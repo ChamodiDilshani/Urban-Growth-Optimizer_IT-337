@@ -1,7 +1,7 @@
 import importlib
 import io
 import unittest
-from unittest.mock import patch
+from unittest.mock import Mock, patch
 
 from PIL import Image
 
@@ -37,9 +37,11 @@ class TrackingBytesIO(io.BytesIO):
 class DetectEndpointTests(unittest.IsolatedAsyncioTestCase):
     def setUp(self):
         self.original_max_bytes = api.MAX_BYTES
+        self.original_max_pixels = api.MAX_PIXELS
 
     def tearDown(self):
         api.MAX_BYTES = self.original_max_bytes
+        api.MAX_PIXELS = self.original_max_pixels
 
     async def test_detect_rejects_oversized_upload_with_bounded_read(self):
         from fastapi import UploadFile
@@ -54,13 +56,28 @@ class DetectEndpointTests(unittest.IsolatedAsyncioTestCase):
         self.assertEqual(raised.exception.status_code, 413)
         self.assertEqual(stream.last_read_size, api.MAX_BYTES + 1)
 
+    async def test_detect_rejects_oversized_dimensions_before_loading_image(self):
+        from fastapi import UploadFile
+
+        api.MAX_BYTES = 32
+        api.MAX_PIXELS = 10
+        image = Mock(width=4, height=3)
+        upload = UploadFile(filename="large.png", file=io.BytesIO(b"image"))
+
+        with patch.object(api.Image, "open", return_value=image):
+            with self.assertRaises(api.HTTPException) as raised:
+                await api.detect(upload, conf=0.25, iou=0.5)
+
+        self.assertEqual(raised.exception.status_code, 413)
+        image.load.assert_not_called()
+
     async def test_detect_accepts_valid_image_at_size_limit(self):
         from fastapi import UploadFile
 
         data = png_bytes()
         api.MAX_BYTES = len(data)
+        api.MAX_PIXELS = 1
         upload = UploadFile(filename="small.png", file=io.BytesIO(data))
-
         result = await api.detect(upload, conf=0.25, iou=0.5)
 
         self.assertEqual(result, {"width": 1, "height": 1, "detections": []})

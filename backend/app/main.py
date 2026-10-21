@@ -18,6 +18,7 @@ app.add_middleware(
 
 detector = Detector()
 MAX_BYTES = 15 * 1024 * 1024
+MAX_PIXELS = 40_000_000
 
 
 @app.get("/api/health")
@@ -36,6 +37,8 @@ async def detect(
         raise HTTPException(413, "Image too large (max 15 MB)")
     try:
         img = Image.open(io.BytesIO(data))
+        if img.width * img.height > MAX_PIXELS:
+            raise HTTPException(413, "Image dimensions too large (max 40 megapixels)")
         img.load()
     except (UnidentifiedImageError, OSError):
         raise HTTPException(400, "File is not a valid image")
