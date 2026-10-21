@@ -101,5 +101,32 @@ class HealthEndpointTests(unittest.TestCase):
         self.assertEqual(result, {"status": "ok", "classes": StubDetector.names})
 
 
+class DetectParameterTests(unittest.TestCase):
+    def test_openapi_documents_confidence_and_iou_bounds(self):
+        parameters = api.app.openapi()["paths"]["/api/detect"]["post"]["parameters"]
+        query_parameters = {parameter["name"]: parameter for parameter in parameters}
+
+        self.assertEqual(
+            query_parameters["conf"]["schema"],
+            {
+                "type": "number",
+                "maximum": 0.99,
+                "minimum": 0.01,
+                "default": 0.25,
+                "title": "Conf",
+            },
+        )
+        self.assertEqual(
+            query_parameters["iou"]["schema"],
+            {
+                "type": "number",
+                "maximum": 0.99,
+                "minimum": 0.1,
+                "default": 0.5,
+                "title": "Iou",
+            },
+        )
+
+
 if __name__ == "__main__":
     unittest.main()
