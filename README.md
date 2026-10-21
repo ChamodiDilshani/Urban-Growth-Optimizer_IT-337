@@ -19,8 +19,10 @@ The detector expects these files:
 - `backend\models\model.onnx`
 - `backend\models\label.json`
 
-The ONNX model is not tracked in this repository. Obtain and place the model at
-the path above before starting the API.
+The ONNX model is tracked with Git LFS. Install Git LFS before cloning so the
+model is downloaded with the repository. If the model file contains a short
+Git LFS pointer rather than the model, run `git lfs pull` from the repository
+root before starting the API.
 
 ### Run
 
