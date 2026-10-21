@@ -108,6 +108,19 @@ class DetectEndpointTests(unittest.IsolatedAsyncioTestCase):
 
         self.assertEqual(raised.exception.status_code, 400)
 
+    async def test_detect_converts_image_decode_oserror_to_bad_request(self):
+        from fastapi import UploadFile
+
+        api.MAX_BYTES = 32
+        upload = UploadFile(filename="broken.png", file=io.BytesIO(b"broken"))
+
+        with patch.object(api.Image, "open", side_effect=OSError("decode failed")):
+            with self.assertRaises(api.HTTPException) as raised:
+                await api.detect(upload, conf=0.25, iou=0.5)
+
+        self.assertEqual(raised.exception.status_code, 400)
+        self.assertEqual(raised.exception.detail, "File is not a valid image")
+
 
 class HealthEndpointTests(unittest.TestCase):
     def test_health_reports_status_and_detector_classes(self):
