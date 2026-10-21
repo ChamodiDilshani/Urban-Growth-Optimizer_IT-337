@@ -21,6 +21,15 @@ class DetectorTests(unittest.TestCase):
         np.testing.assert_allclose(tensor[0, :, 0, 0], 114 / 255)
         np.testing.assert_allclose(tensor[0, :, 320, 320], (1.0, 0.0, 0.0))
 
+    def test_preprocess_converts_transparent_image_to_rgb(self):
+        image = Image.new("RGBA", (32, 32), (0, 255, 0, 128))
+
+        tensor, scale, pad_x, pad_y = self.detector._preprocess(image)
+
+        self.assertEqual(tensor.shape, (1, 3, IMGSZ, IMGSZ))
+        self.assertTrue(np.isfinite(tensor).all())
+        self.assertEqual((scale, pad_x, pad_y), (20.0, 0, 0))
+
     def test_nms_keeps_highest_scoring_overlapping_box_and_separate_box(self):
         boxes = np.array(
             [[0, 0, 10, 10], [1, 1, 9, 9], [20, 20, 30, 30]], dtype=np.float32
