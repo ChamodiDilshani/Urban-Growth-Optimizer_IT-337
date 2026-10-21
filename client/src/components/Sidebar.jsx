@@ -1,4 +1,5 @@
 import React from 'react';
+import SearchableSelect from './SearchableSelect';
 
 export default function Sidebar({
   suburbs = [],
@@ -51,24 +52,19 @@ export default function Sidebar({
           )}
         </div>
 
-        <select
+        <SearchableSelect
           id="suburb-select"
-          className="form-select"
+          options={suburbs}
           value={params.suburb}
-          onChange={(e) => {
+          onChange={(newVal) => {
             if (onSuburbChange) {
-              onSuburbChange(e.target.value);
+              onSuburbChange(newVal);
             } else {
-              handleChange('suburb', e.target.value);
+              handleChange('suburb', newVal);
             }
           }}
-        >
-          {suburbs.map((suburb) => (
-            <option key={suburb} value={suburb}>
-              {suburb}
-            </option>
-          ))}
-        </select>
+          placeholder="Search Colombo suburb..."
+        />
 
         {/* Dynamic status indicator under the selector */}
         {isMapSelected ? (
