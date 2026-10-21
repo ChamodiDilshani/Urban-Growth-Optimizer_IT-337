@@ -1,0 +1,81 @@
+import importlib
+import io
+import unittest
+from unittest.mock import patch
+
+from PIL import Image
+
+from backend.app import detector as detector_module
+
+
+class StubDetector:
+    names = {0: "test"}
+
+    def predict(self, image, conf=0.25, iou=0.5):
+        return {"width": image.width, "height": image.height, "detections": []}
+
+
+with patch.object(detector_module, "Detector", StubDetector):
+    api = importlib.import_module("backend.app.main")
+
+
+def png_bytes():
+    image = Image.new("RGB", (1, 1), (255, 0, 0))
+    output = io.BytesIO()
+    image.save(output, format="PNG")
+    return output.getvalue()
+
+
+class TrackingBytesIO(io.BytesIO):
+    last_read_size = None
+
+    def read(self, size=-1):
+        self.last_read_size = size
+        return super().read(size)
+
+
+class DetectEndpointTests(unittest.IsolatedAsyncioTestCase):
+    def setUp(self):
+        self.original_max_bytes = api.MAX_BYTES
+
+    def tearDown(self):
+        api.MAX_BYTES = self.original_max_bytes
+
+    async def test_detect_rejects_oversized_upload_with_bounded_read(self):
+        from fastapi import UploadFile
+
+        api.MAX_BYTES = 8
+        stream = TrackingBytesIO(b"x" * 32)
+        upload = UploadFile(filename="large.png", file=stream)
+
+        with self.assertRaises(api.HTTPException) as raised:
+            await api.detect(upload, conf=0.25, iou=0.5)
+
+        self.assertEqual(raised.exception.status_code, 413)
+        self.assertEqual(stream.last_read_size, api.MAX_BYTES + 1)
+
+    async def test_detect_accepts_valid_image_at_size_limit(self):
+        from fastapi import UploadFile
+
+        data = png_bytes()
+        api.MAX_BYTES = len(data)
+        upload = UploadFile(filename="small.png", file=io.BytesIO(data))
+
+        result = await api.detect(upload, conf=0.25, iou=0.5)
+
+        self.assertEqual(result, {"width": 1, "height": 1, "detections": []})
+
+    async def test_detect_rejects_invalid_image(self):
+        from fastapi import UploadFile
+
+        api.MAX_BYTES = 32
+        upload = UploadFile(filename="invalid.png", file=io.BytesIO(b"not an image"))
+
+        with self.assertRaises(api.HTTPException) as raised:
+            await api.detect(upload, conf=0.25, iou=0.5)
+
+        self.assertEqual(raised.exception.status_code, 400)
+
+
+if __name__ == "__main__":
+    unittest.main()
