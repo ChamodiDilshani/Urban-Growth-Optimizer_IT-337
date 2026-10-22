@@ -11,7 +11,7 @@ from pydantic import BaseModel, Field
 from typing import Optional, Dict, Any
 import uvicorn
 
-from model_engine import engine, ROAD_MULTIPLIERS, FLOOD_PRONE
+from model_engine import engine, ROAD_MULTIPLIERS, FLOOD_PRONE, NBRO_FLOOD_ZONES
 from pdf_generator import create_pdf_bytes
 
 app = FastAPI(title="Urbanscapes-LK Model Engine API", version="1.0.0")
@@ -48,6 +48,7 @@ def get_metadata():
         "land_types": engine.land_types,
         "road_widths": list(ROAD_MULTIPLIERS.keys()),
         "flood_prone": FLOOD_PRONE,
+        "flood_zones": NBRO_FLOOD_ZONES,
         "default_coords": {"lat": 6.9022, "lon": 79.9172},
         "fort_coords": {"lat": 6.9344, "lon": 79.8428}
     }

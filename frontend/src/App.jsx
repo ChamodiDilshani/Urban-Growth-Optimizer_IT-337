@@ -186,6 +186,7 @@ export default function App() {
 
       // Fallback: request base64 JSON from backend
       const isFlood = Boolean(valuation.is_flood_risk);
+      const zoneName = valuation.flood_zone_name ? ` (${valuation.flood_zone_name})` : '';
 
       const parcelInfo = {
         'Suburb / Area': params.suburb.charAt(0).toUpperCase() + params.suburb.slice(1),
@@ -194,14 +195,16 @@ export default function App() {
         'Zoning Category': params.land_type,
         'Access Road Width': params.road_width,
         'Distance to Colombo Fort': `${valuation.dist_fort} km`,
-        'NBRO Hazard Status': isFlood ? 'High Flood Risk' : 'Low Risk Zone',
+        'NBRO Hazard Status': isFlood ? `High Flood Risk${zoneName}` : 'Low Risk Zone',
       };
 
       const valInfo = {
         'Predicted Price per Perch': `LKR ${Number(valuation.final_price_per_perch).toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}`,
         'Total Parcel Valuation': `LKR ${Number(valuation.total_valuation).toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}`,
-        'Annual Assessed Rental Value': `LKR ${Number(valuation.annual_assessed_value).toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}`,
-        [`Statutory Tax (${params.target_year})`]: `LKR ${Number(valuation.annual_tax).toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}`,
+        'Annual Assessed Value (ARV)': `LKR ${Number(valuation.annual_assessed_value).toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}`,
+        'Assessment Methodology': 'Hedonic Capitalization & Progressive Rating Algorithm',
+        'Effective Rental Yield Rate': `${(Number(valuation.yield_rate || 0.04) * 100).toFixed(2)}%`,
+        [`Statutory Municipal Tax (${params.target_year})`]: `LKR ${Number(valuation.annual_tax).toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 })} (${(Number(valuation.tax_rate || 0.08) * 100).toFixed(2)}% Algorithmic Rate)`,
         'Multi-Year': valuation.multi_year_tax || {},
       };
 
@@ -282,6 +285,7 @@ export default function App() {
             onCoordsChange={handleCoordsChange}
             distFort={valuation?.dist_fort ?? 14.89}
             isFloodRisk={valuation?.is_flood_risk ?? false}
+            floodZoneName={valuation?.flood_zone_name ?? ''}
             suburb={params.suburb}
             suburbs={metadata.suburbs}
             isMapSelected={selectionSource === 'map'}

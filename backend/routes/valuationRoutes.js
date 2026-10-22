@@ -135,7 +135,7 @@ router.post('/pdf', async (req, res) => {
 router.get('/history', async (req, res) => {
   try {
     if (isDBConnected()) {
-      const records = await Valuation.find().sort({ createdAt: -1 }).limit(25).lean();
+      const records = await Valuation.find().sort({ createdAt: -1 }).limit(50).lean();
       return res.json({ success: true, count: records.length, data: records, source: 'mongodb' });
     } else {
       return res.json({ success: true, count: inMemoryHistory.length, data: inMemoryHistory, source: 'memory' });

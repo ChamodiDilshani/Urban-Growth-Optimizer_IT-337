@@ -61,8 +61,61 @@ export default function MetricsDisplay({
           <span className="metric-label">Statutory Annual Tax (වරිපනම්)</span>
           <span className="metric-value">{formatLKR(annual_tax)}</span>
           <span className="metric-delta">
-            {(tax_rate * 100).toFixed(0)}% Municipal Rate
+            {(tax_rate * 100).toFixed(2)}% Algorithmic Rate
           </span>
+        </div>
+      </div>
+
+      {/* Algorithmic Methodology Badge */}
+      <div
+        style={{
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'space-between',
+          backgroundColor: '#f8fafc',
+          border: '1px solid #e2e8f0',
+          borderRadius: '6px',
+          padding: '6px 12px',
+          marginBottom: '1rem',
+          fontSize: '0.78rem',
+          color: '#475569',
+          flexWrap: 'wrap',
+          gap: '6px',
+        }}
+      >
+        <div style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
+          <span>⚙️</span>
+          <span>
+            <strong>Tax Engine:</strong> Hedonic Capitalization & Progressive Rating Algorithm
+          </span>
+        </div>
+        <div style={{ display: 'flex', gap: '8px', flexWrap: 'wrap' }}>
+          {valuation.yield_rate && (
+            <span
+              style={{
+                backgroundColor: '#e0f2fe',
+                color: '#0369a1',
+                padding: '1px 6px',
+                borderRadius: '4px',
+                fontWeight: 600,
+              }}
+            >
+              Rental Yield: {(valuation.yield_rate * 100).toFixed(2)}%
+            </span>
+          )}
+          {valuation.spatial_infrastructure_index && (
+            <span
+              style={{
+                backgroundColor: '#f1f5f9',
+                color: '#334155',
+                padding: '1px 6px',
+                borderRadius: '4px',
+                fontWeight: 600,
+              }}
+            >
+              Infra Index: {valuation.spatial_infrastructure_index}
+            </span>
+          )}
         </div>
       </div>
 
@@ -112,6 +165,7 @@ export default function MetricsDisplay({
               <tr>
                 <th>Projection Year</th>
                 <th>Projected Annual Tax (LKR)</th>
+                <th>Algorithmic CBSL Drift</th>
               </tr>
             </thead>
             <tbody>
@@ -124,6 +178,11 @@ export default function MetricsDisplay({
                       minimumFractionDigits: 2,
                       maximumFractionDigits: 2,
                     })}
+                  </td>
+                  <td style={{ fontSize: '0.80rem', color: '#0369a1', fontWeight: 600 }}>
+                    {valuation.annual_growth_rates?.[yearLabel]
+                      ? `+${valuation.annual_growth_rates[yearLabel]}% / yr`
+                      : 'CBSL Macro Model'}
                   </td>
                 </tr>
               ))}
