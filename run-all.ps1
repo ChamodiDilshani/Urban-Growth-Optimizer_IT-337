@@ -16,7 +16,7 @@ Start-Sleep -Seconds 3
 
 # 2. Start Express Backend
 Write-Host "[2/3] Launching Node.js Express Backend (Port 5000)..." -ForegroundColor Green
-$serverProc = Start-Process node -ArgumentList "server/server.js" -PassThru -NoNewWindow
+$serverProc = Start-Process node -ArgumentList "backend/server.js" -PassThru -NoNewWindow
 
 Start-Sleep -Seconds 2
 
@@ -25,7 +25,7 @@ Write-Host "[3/3] Launching React Vite Frontend (Port 5173)..." -ForegroundColor
 Write-Host "Access the application in your browser at: http://localhost:5173" -ForegroundColor Yellow
 Start-Process "http://localhost:5173"
 
-Set-Location client
+Set-Location frontend
 npm run dev
 
 # Cleanup when React Vite terminates
